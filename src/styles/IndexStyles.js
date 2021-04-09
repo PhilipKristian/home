@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components";
 
 const Banner = styled.div`
   &:after {
@@ -14,7 +14,7 @@ const Banner = styled.div`
     background-attachment: ${props => (props.parallax ? "fixed" : "scroll")};
     filter: grayscale(100%) blur(2px);
   }
-`
+`;
 const TextWrapper = styled.div`
    {
     position: absolute;
@@ -54,7 +54,7 @@ const TextWrapper = styled.div`
       text-transform: uppercase;
     }
   }
-`
+`;
 const MoreText = styled.div`
   position: absolute;
   color: #ffffff;
@@ -80,5 +80,41 @@ const MoreText = styled.div`
     background-repeat: no-repeat;
     background-position: center;
   }
-`
-export { Banner, TextWrapper, MoreText }
+`;
+
+const spin = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const MyAnimation = styled.div`
+  width: 60px;
+  height: 60px;
+  margin-bottom: 45px;
+  border: 10px solid;
+  border-radius: 50%;
+  border-color: #ed4933 #ed493330;
+  animation: 1.5s ${spin} infinite;
+`;
+
+/* // Create the keyframes
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+// Here we create a component that will rotate everything we pass in over two seconds
+const Rotate = styled.div`
+  display: inline-block;
+  animation: ${rotate} 2s linear infinite;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+`; */
+
+export { Banner, TextWrapper, MoreText, MyAnimation };
