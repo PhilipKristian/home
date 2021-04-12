@@ -1,5 +1,24 @@
 import styled, { keyframes } from "styled-components";
 
+const GenereicPara = styled.p`
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "0.225em")};
+  font-size: ${props => (props.lessSize ? "1.5rem" : "2.5rem")};
+  line-height: ${props => (props.lessSize ? "2rem" : "3rem")};
+  color: ${props => (props.grey ? "white" : "#ffffff")};
+`;
+
+const GenericH2 = styled.h2`
+  font-size: 3rem;
+  padding: ${props => (props.none ? "0" : "1.35em 0")};
+  color: #ffffff;
+  border-bottom: ${props => (props.none ? "0" : "2px solid #ed4933")};
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
+`;
+
 const Banner = styled.div`
   &:after {
     content: "";
@@ -55,6 +74,7 @@ const TextWrapper = styled.div`
     }
   }
 `;
+
 const MoreText = styled.div`
   position: absolute;
   color: #ffffff;
@@ -79,6 +99,66 @@ const MoreText = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+`;
+
+const SectionTwo = styled.section`
+  background-color: grey;
+  text-align: center;
+  padding: 10rem 0;
+  div {
+    width: 66%;
+    margin: 0 auto;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #ffffff;
+    border-bottom: 2px solid #ed4933;
+    font-weight: 800;
+    letter-spacing: 0.225em;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    margin-bottom: 5rem;
+  }
+`;
+const SectionThree = styled.section`
+  background-color: #2b343d;
+  color: #ffffff;
+`;
+const FlexBoxIndex = styled.div`
+  display: flex;
+  .image {
+    width: ${props => (props.inverse ? "60%" : "40%")};
+  }
+  img {
+    width: 100%;
+  }
+  .text_section3 {
+    width: ${props => (props.inverse ? "40%" : "60%")};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+`;
+const SectionFour = styled.section`
+  background-color: grey;
+  color: #ffffff;
+  text-align: center;
+  .header_section4 {
+    width: 66%;
+    margin: 0 auto;
+  }
+  .title_section4 {
+    font-size: 3rem;
+    padding: 1.35em 0;
+    color: #ffffff;
+    border-bottom: 2px solid #ed4933;
+    text-transform: uppercase;
+    letter-spacing: 0.225em;
+    margin: 0;
   }
 `;
 
@@ -117,4 +197,15 @@ const Rotate = styled.div`
   font-size: 1.2rem;
 `; */
 
-export { Banner, TextWrapper, MoreText, MyAnimation };
+export {
+  Banner,
+  TextWrapper,
+  MoreText,
+  MyAnimation,
+  SectionTwo,
+  SectionThree,
+  SectionFour,
+  GenereicPara,
+  GenericH2,
+  FlexBoxIndex,
+};
