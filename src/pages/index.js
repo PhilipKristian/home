@@ -4,6 +4,16 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faHeart, faCode, faGem, fas } from "@fortawesome/free-solid-svg-icons";
+import {
+  fab,
+  faHtml5,
+  faJs,
+  faReact,
+  faCss3,
+  faGalacticSenate,
+} from "@fortawesome/free-brands-svg-icons";
+
+import Layout from "../components/layout";
 
 import {
   Banner,
@@ -18,10 +28,10 @@ import {
   GenericH2,
 } from "../styles/IndexStyles";
 
-library.add(faHeart, faCode, faGem, fas);
+library.add(faHeart, faCode, faGem, fab, fas);
 
 export default () => (
-  <>
+  <Layout>
     <section style={{ position: "relative" }}>
       <Banner></Banner>
       <TextWrapper>
@@ -112,13 +122,92 @@ export default () => (
       </FlexBoxIndex>
     </SectionThree>
     <SectionFour>
-      <div className="header_section4">
-        <div className="title_section4"> My Technologies</div>
-        <GenereicPara lessSize grey>
-          I am interested in the latest technologies <br />
-          as they are highly scalable and maintainable.
-        </GenereicPara>
+      <div className="header__section4">
+        <div className="title__section4">MY Technologies</div>
+      </div>
+      <div className="grid__section4">
+        <div className="item1" style={{ backgroundColor: "#2b343d" }}>
+          <div className="flex__section4">
+            <FontAwesomeIcon
+              icon={faReact}
+              color="#ed4933"
+              size="3x"
+              fixedWidth
+            />
+            <GenericH2 none>React</GenericH2>
+          </div>
+          <GenereicPara lessSize lessSpacing grey>
+            Modern JavaScript framework which will make your web application
+            extremely fast and, at the same time, handy for every user.
+          </GenereicPara>
+        </div>
+        <div className="item2" style={{ backgroundColor: "#4D0000" }}>
+          <div className="flex__section4">
+            <FontAwesomeIcon icon="code" color="#ed4933" size="3x" fixedWidth />
+            <GenericH2 none>React Native</GenericH2>
+          </div>
+          <GenereicPara lessSize lessSpacing grey>
+            Cross-platform for mobile app development based on Javascript, whose
+            resulting code is compiled to Android and iOS.
+          </GenereicPara>
+        </div>
+        <div className="item3" style={{ backgroundColor: "#4D0000" }}>
+          <div className="flex__section4">
+            <FontAwesomeIcon icon={faJs} color="#ed4933" size="3x" fixedWidth />
+            <GenericH2 none>JavaScript</GenericH2>
+          </div>
+          <GenereicPara lessSize lessSpacing grey>
+            JavaScript is the language of the web. It is used for Web
+            development, mobile development and app development and everything
+            else.
+          </GenereicPara>
+        </div>
+        <div className="item4" style={{ backgroundColor: "#2b343d" }}>
+          <div className="flex__section4">
+            <FontAwesomeIcon
+              icon={faHtml5}
+              color="#ed4933"
+              size="3x"
+              fixedWidth
+            />
+            <GenericH2 none>HTML5</GenericH2>
+          </div>
+          <GenereicPara lessSize lessSpacing grey>
+            HTML, a standardized system for tagging text files to achieve font,
+            colour, graphic, and hyperlink effects on World Wide Web pages.
+          </GenereicPara>
+        </div>
+        <div className="item5" style={{ backgroundColor: "#2b343d" }}>
+          <div className="flex__section4">
+            <FontAwesomeIcon
+              icon={faCss3}
+              color="#ed4933"
+              size="3x"
+              fixedWidth
+            />
+            <GenericH2 none>CSS3</GenericH2>
+          </div>
+          <GenereicPara lessSize lessSpacing grey>
+            CSS is a style sheet language used for describing the presentation
+            of a document written in a markup language like HTML.
+          </GenereicPara>
+        </div>
+        <div className="item6" style={{ backgroundColor: "#4D0000" }}>
+          <div className="flex__section4">
+            <FontAwesomeIcon
+              icon={faGalacticSenate}
+              color="#ed4933"
+              size="3x"
+              fixedWidth
+            />
+            <GenericH2 none>Gatsby</GenericH2>
+          </div>
+          <GenereicPara lessSize lessSpacing grey>
+            Gatsby is a free and open source framework based on React that helps
+            developers build blazing fast websites and apps
+          </GenereicPara>
+        </div>
       </div>
     </SectionFour>
-  </>
+  </Layout>
 );

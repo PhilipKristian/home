@@ -13,7 +13,7 @@ const GenericH2 = styled.h2`
   font-size: 3rem;
   padding: ${props => (props.none ? "0" : "1.35em 0")};
   color: #ffffff;
-  border-bottom: ${props => (props.none ? "0" : "2px solid #ed4933")};
+  border-bottom: ${props => (props.none ? "0" : "2px solid #4D0000")};
   text-transform: uppercase;
   letter-spacing: 0.6rem;
   margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
@@ -115,7 +115,7 @@ const SectionTwo = styled.section`
     font-size: 1.4rem;
     line-height: 2rem;
     color: #ffffff;
-    border-bottom: 2px solid #ed4933;
+    border-bottom: 2px solid #4d0000;
     font-weight: 800;
     letter-spacing: 0.225em;
     text-transform: uppercase;
@@ -151,14 +151,69 @@ const SectionFour = styled.section`
     width: 66%;
     margin: 0 auto;
   }
-  .title_section4 {
+  .title__section4 {
     font-size: 3rem;
     padding: 1.35em 0;
     color: #ffffff;
-    border-bottom: 2px solid #ed4933;
     text-transform: uppercase;
     letter-spacing: 0.225em;
     margin: 0;
+  }
+  .grid__section4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 66%;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  .grid__section4 > * {
+    padding: 3rem;
+  }
+  .flex__section4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .flex__section4 > h2 {
+    margin-left: 1rem;
+  }
+`;
+
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 3rem 0;
+  .menu_items {
+    display: flex;
+  }
+  .menu_items > * {
+    margin-right: 1rem;
+  }
+`;
+
+const Footer = styled.footer`
+  padding: 6em 0 4em 0;
+  background-color: #2b343d;
+  text-align: center;
+  .icons > * {
+    cursor: pointer;
+    margin-right: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .copyright {
+    color: white;
+    )font-size: 1.2rem;
+    letter-spacing: 0.225em;
+    padding: 0;
+    text-transform: uppercase;
+    margin-top: 1rem;
   }
 `;
 
@@ -208,4 +263,6 @@ export {
   GenereicPara,
   GenericH2,
   FlexBoxIndex,
+  Header,
+  Footer,
 };
