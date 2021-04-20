@@ -21,6 +21,7 @@ const GenericH2 = styled.h2`
 
 const Banner = styled.div`
   &:after {
+    z-index: 20;
     content: "";
     display: block;
     height: ${props => (props.parallax ? "80vh" : "100vh")};
@@ -181,6 +182,7 @@ const SectionFour = styled.section`
 `;
 
 const Header = styled.header`
+  z-index: 30;
   display: flex;
   justify-content: space-between;
   align-items: center;
