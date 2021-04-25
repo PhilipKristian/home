@@ -1,5 +1,24 @@
 import styled, { keyframes } from "styled-components";
 
+const Header = styled.header`
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 3rem 0;
+  .menu_items {
+    display: flex;
+  }
+  .menu_items > * {
+    margin-right: 1rem;
+  }
+`;
+
 const GenereicPara = styled.p`
   text-transform: uppercase;
   text-align: center;
@@ -26,14 +45,8 @@ const Banner = styled.div`
     display: block;
     height: ${props => (props.parallax ? "80vh" : "100vh")};
     width: 100%;
-    background-image: ${props =>
-      props.different ? "url('developer.jpg')" : "url('banner.jpg')"};
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: ${props => (props.parallax ? "fixed" : "scroll")};
-    filter: grayscale(100%) blur(2px);
-  }
+    background: rgb(255,0,133);
+    background: linear-gradient(65deg, rgba(255,0,133,1) 0%, rgba(248,8,8,1) 35%, rgba(8,12,80,1) 100%);
 `;
 const TextWrapper = styled.div`
    {
@@ -131,13 +144,13 @@ const SectionThree = styled.section`
 const FlexBoxIndex = styled.div`
   display: flex;
   .image {
-    width: ${props => (props.inverse ? "60%" : "40%")};
+    width: ${props => (props.inverse ? "50%" : "50%")};
   }
   img {
     width: 100%;
   }
   .text_section3 {
-    width: ${props => (props.inverse ? "40%" : "60%")};
+    width: ${props => (props.inverse ? "50%" : "50%")};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,25 +191,6 @@ const SectionFour = styled.section`
   }
   .flex__section4 > h2 {
     margin-left: 1rem;
-  }
-`;
-
-const Header = styled.header`
-  z-index: 30;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 30px;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: white;
-  padding: 3rem 0;
-  .menu_items {
-    display: flex;
-  }
-  .menu_items > * {
-    margin-right: 1rem;
   }
 `;
 

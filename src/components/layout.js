@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 import { Header, Footer, GenericH2, GenereicPara } from "../styles/IndexStyles";
 
 export default ({ children }) => (
@@ -9,18 +11,23 @@ export default ({ children }) => (
     <Header>
       <GenericH2 none>
         <Link to="/" style={{ color: "white" }}>
-          EUJURIKA
+          Philipp Kristian
         </Link>
       </GenericH2>
       <div className="menu_items">
-        <Link to="/works">
+        <Link to="/read">
           <GenereicPara lessSize lessSpacing grey>
-            Works
+            Read
           </GenereicPara>
         </Link>
-        <Link to="/about">
+        <Link to="/experience">
           <GenereicPara lessSize lessSpacing grey>
-            About
+            Experience
+          </GenereicPara>
+        </Link>
+        <Link to="/create">
+          <GenereicPara lessSize lessSpacing grey>
+            Create
           </GenereicPara>
         </Link>
       </div>
@@ -32,8 +39,7 @@ export default ({ children }) => (
         <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
       </div>
       <div class="copyright">
-        <span>&copy; 2021, Eujurika | </span>
-        <span> Made with ❤️ and ☕️ in Bremen </span>
+        <span>&copy; 2021 | Philipp Kristian </span>
       </div>
     </Footer>
   </div>
