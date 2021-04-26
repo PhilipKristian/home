@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
+import SingleImage from "../components/SingleImage";
 
 import {
   Banner,
   TextWrapper,
   MoreText,
-  MyAnimation,
+  ImagesWrapper,
   SectionTwo,
   SectionThree,
   SectionFour,
@@ -15,6 +16,20 @@ import {
   GenereicPara,
   GenericH2,
 } from "../styles/IndexStyles";
+
+import image01 from "../../static/Daimler.jpg";
+import image02 from "../../static/Microsoft.jpg";
+
+const clients = [
+  {
+    source: image01,
+    title: "Daimler",
+  },
+  {
+    source: image02,
+    title: "Microsoft",
+  },
+];
 
 export default () => (
   <Layout>
@@ -31,46 +46,45 @@ export default () => (
       </TextWrapper>
       <MoreText>Learn more </MoreText>
     </section>
-    <section>
-      <div className="image">
-        <img src="Showreel21Still.png" alt="Showreel21Still" />
-      </div>
-    </section>
-    {/*    <SectionTwo>
-      <div>
-        <GenericH2>MY PASSION</GenericH2>
-        <GenereicPara lessSize grey>
-          Most good programmers do programming not because they expect to get
-          paid, <br /> but bacause it's fun to program
-        </GenereicPara>
-        <h5> - Linus Torvalds</h5>
-      </div>
-    </SectionTwo> */}
+
+    <SectionTwo></SectionTwo>
+
     <SectionThree>
-      <FlexBoxIndex>
-        <div className="image">
-          <img src="facebook.jpg" alt="facebook" />
-        </div>
-        <div className="text_section3">
-          <GenericH2 none>Facebook</GenericH2>
-        </div>
-      </FlexBoxIndex>
-      <FlexBoxIndex inverse>
-        <div className="text_section3">
-          <GenericH2 none>Deloitte</GenericH2>
-        </div>
+      <ImagesWrapper>
+        <SingleImage client={clients[0]} />
+        <SingleImage client={clients[1]} />
+        {/*    <div className="image">
+            <img src="PandG.jpg" alt="PandG" />
+          </div>
+          <div className="image">
+            <img src="Daimler.jpg" alt="Daimler" />
+          </div> */}
+      </ImagesWrapper>
+      <FlexBoxIndex></FlexBoxIndex>
+      {/*   <FlexBoxIndex>
         <div className="image">
           <img src="Deloitte.jpg" alt="Deloitte" />
+        </div>
+        <div className="image">
+          <img src="facebook.jpg" alt="facebook" />
         </div>
       </FlexBoxIndex>
       <FlexBoxIndex>
         <div className="image">
           <img src="Microsoft.jpg" alt="Microsoft" />
         </div>
-        <div className="text_section3">
-          <GenericH2 none>Microsoft</GenericH2>
+        <div className="image">
+          <img src="Salesforce.jpg" alt="Salesforce" />
         </div>
       </FlexBoxIndex>
+      <FlexBoxIndex>
+        <div className="image">
+          <img src="BMWi.jpg" alt="BMWi" />
+        </div>
+        <div className="image">
+          <img src="Prudential.jpg" alt="Prudential" />
+        </div>
+      </FlexBoxIndex> */}
     </SectionThree>
   </Layout>
 );

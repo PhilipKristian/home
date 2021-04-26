@@ -30,7 +30,7 @@ const GenereicPara = styled.p`
 
 const GenericH2 = styled.h2`
   font-size: 3rem;
-  padding: ${props => (props.none ? "0" : "1.35em 0")};
+  padding: ${props => (props.none ? "0" : "0.5em 0")};
   color: #ffffff;
   border-bottom: ${props => (props.none ? "0" : "2px solid #4D0000")};
   text-transform: uppercase;
@@ -116,42 +116,44 @@ const MoreText = styled.div`
   }
 `;
 
-const SectionTwo = styled.section`
-  background-color: grey;
-  text-align: center;
-  padding: 10rem 0;
-  div {
-    width: 66%;
-    margin: 0 auto;
-  }
-
-  h5 {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    color: #ffffff;
-    border-bottom: 2px solid #4d0000;
-    font-weight: 800;
-    letter-spacing: 0.225em;
-    text-transform: uppercase;
-    padding-bottom: 0.5rem;
-    margin-bottom: 5rem;
+const SectionTwo = styled.div`
+  &:after {
+    content: "";
+    display: block;
+    height: ${props => (props.parallax ? "80vh" : "100vh")};
+    width: 100%;
+    background-image: ${props =>
+      props.different
+        ? "url('Showreel21Still.png')"
+        : "url('Showreel21Still.png')"};
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: ${props => (props.parallax ? "fixed" : "scroll")};
   }
 `;
 const SectionThree = styled.section`
   background-color: #2b343d;
   color: #ffffff;
 `;
+
+const ImagesWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 const FlexBoxIndex = styled.div`
   display: flex;
   .image {
-    width: ${props => (props.inverse ? "50%" : "50%")};
+    width: 50%;
   }
   img {
     width: 100%;
+    height: ${props => (props.parallax ? "55vh" : "75vh")};
   }
   .text_section3 {
-    width: ${props => (props.inverse ? "50%" : "50%")};
     display: flex;
+    z-index: 1;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -255,10 +257,11 @@ export {
   MyAnimation,
   SectionTwo,
   SectionThree,
+  ImagesWrapper,
+  FlexBoxIndex,
   SectionFour,
   GenereicPara,
   GenericH2,
-  FlexBoxIndex,
   Header,
   Footer,
 };
