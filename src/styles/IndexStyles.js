@@ -46,7 +46,7 @@ const Banner = styled.div`
     height: ${props => (props.parallax ? "80vh" : "100vh")};
     width: 100%;
     background: rgb(255,0,133);
-    background: linear-gradient(65deg, rgba(255,0,133,1) 0%, rgba(248,8,8,1) 35%, rgba(8,12,80,1) 100%);
+    background: linear-gradient(65deg, rgba(255,0,133,1) 20%, rgba(248,8,8,1) 50%);
 `;
 const TextWrapper = styled.div`
    {
