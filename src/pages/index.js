@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SingleImage from "../components/SingleImage";
@@ -17,51 +17,95 @@ import {
   GenericH2,
 } from "../styles/IndexStyles";
 
-import image01 from "../../static/Daimler.jpg";
-import image02 from "../../static/Microsoft.jpg";
+import image01 from "../../static/PandG.jpg";
+import image02 from "../../static/Daimler.jpg";
+import image03 from "../../static/Deloitte.jpg";
+import image04 from "../../static/facebook.jpg";
+import image05 from "../../static/Microsoft.jpg";
+import image06 from "../../static/Salesforce.jpg";
+import image07 from "../../static/BMWi.jpg";
+import image08 from "../../static/Prudential.jpg";
 
 const clients = [
   {
     source: image01,
-    title: "Daimler",
+    title: "P&G",
   },
   {
     source: image02,
+    title: "Daimler",
+  },
+  {
+    source: image03,
+    title: "Deloitte",
+  },
+  {
+    source: image04,
+    title: "Facebook",
+  },
+  {
+    source: image05,
     title: "Microsoft",
+  },
+  {
+    source: image06,
+    title: "Salesforce",
+  },
+  {
+    source: image07,
+    title: "BMWi",
+  },
+  {
+    source: image08,
+    title: "Prudential",
   },
 ];
 
-export default () => (
-  <Layout>
-    <section style={{ position: "relative" }}>
-      <Banner></Banner>
-      <TextWrapper>
-        <div>
-          {/* <MyAnimation /> */}
-          <GenereicPara>
-            Trust makes our complex world simple. <br /> Make it yours to lead,
-            transform and innovate.
-          </GenereicPara>
-        </div>
-      </TextWrapper>
-      <MoreText>Learn more </MoreText>
-    </section>
-
-    <SectionTwo></SectionTwo>
-
-    <SectionThree>
-      <ImagesWrapper>
-        <SingleImage client={clients[0]} />
-        <SingleImage client={clients[1]} />
-        {/*    <div className="image">
-            <img src="PandG.jpg" alt="PandG" />
+export default function Index({ data }) {
+  const clients = data.clients.nodes;
+  const contact = data.contact.siteMetadata.contact;
+  return (
+    <Layout>
+      <section style={{ position: "relative" }}>
+        <Banner></Banner>
+        <TextWrapper>
+          <div>
+            {/* <MyAnimation /> */}
+            <GenereicPara>
+              Trust makes our complex world simple. <br /> Make it yours to
+              lead, transform and innovate.
+            </GenereicPara>
           </div>
-          <div className="image">
-            <img src="Daimler.jpg" alt="Daimler" />
-          </div> */}
-      </ImagesWrapper>
-      <FlexBoxIndex></FlexBoxIndex>
-      {/*   <FlexBoxIndex>
+        </TextWrapper>
+        <MoreText>Learn more </MoreText>
+      </section>
+
+      <SectionTwo></SectionTwo>
+
+      <SectionThree>
+        {clients.map(clients => (
+          <Link to={"/clients/" + clients.frontmatter.slug} key={clients.id}>
+            <GenericH2>{clients.frontmatter.title}</GenericH2>
+          </Link>
+        ))}
+        {/*   <ImagesWrapper>
+          <SingleImage client={clients[0]} />
+          <SingleImage client={clients[1]} />
+        </ImagesWrapper> */}
+        {/*  <ImagesWrapper>
+          <SingleImage client={clients[2]} />
+          <SingleImage client={clients[3]} />
+        </ImagesWrapper>
+        <ImagesWrapper>
+          <SingleImage client={clients[4]} />
+          <SingleImage client={clients[5]} />
+        </ImagesWrapper>
+        <ImagesWrapper>
+          <SingleImage client={clients[6]} />
+          <SingleImage client={clients[7]} />
+        </ImagesWrapper> */}
+        {/* <FlexBoxIndex></FlexBoxIndex> */}
+        {/*   <FlexBoxIndex>
         <div className="image">
           <img src="Deloitte.jpg" alt="Deloitte" />
         </div>
@@ -85,6 +129,30 @@ export default () => (
           <img src="Prudential.jpg" alt="Prudential" />
         </div>
       </FlexBoxIndex> */}
-    </SectionThree>
-  </Layout>
-);
+      </SectionThree>
+    </Layout>
+  );
+}
+
+// export page query
+
+export const query = graphql`
+  query ClientsPage {
+    clients: allMarkdownRemark {
+      nodes {
+        frontmatter {
+          title
+          hover
+          slug
+        }
+        id
+      }
+    }
+    contact: site {
+      siteMetadata {
+        contact
+        phone
+      }
+    }
+  }
+`;

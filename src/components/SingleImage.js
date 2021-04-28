@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 
@@ -15,10 +16,6 @@ const ImgIcons = styled.div`
   justify-content: center;
   color: #ffffff;
   margin-right: 20px;
-
-  svg {
-    margin-right: 10px;
-  }
 `;
 
 const ImgMeta = styled.div`
@@ -43,10 +40,8 @@ const Img = styled.img`
 const SingleImage = props => {
   return (
     <ImgContainer>
-      <Img src={props.client.source} />
-      <ImgMeta>
-        <GenericH2>{props.client.title}</GenericH2>
-      </ImgMeta>
+      {/*  <Img src={props.client.source} /> */}
+      <ImgMeta>{/*  <GenericH2>{props.client.title}</GenericH2> */}</ImgMeta>
     </ImgContainer>
   );
 };
