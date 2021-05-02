@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 const Header = styled.header`
   z-index: 30;
+  font-family: Playfair Display;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,6 +24,8 @@ const GenereicPara = styled.p`
   text-transform: uppercase;
   text-align: center;
   letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "0.225em")};
+  font-family: Fira Sans;
+  font-weight: bold;
   font-size: ${props => (props.lessSize ? "1.5rem" : "2.5rem")};
   line-height: ${props => (props.lessSize ? "2rem" : "3rem")};
   color: ${props => (props.grey ? "white" : "#ffffff")};
@@ -32,7 +35,6 @@ const GenericH2 = styled.h2`
   font-size: 3rem;
   padding: ${props => (props.none ? "0" : "0.5em 0")};
   color: #ffffff;
-  border-bottom: ${props => (props.none ? "0" : "2px solid #4D0000")};
   text-transform: uppercase;
   letter-spacing: 0.6rem;
   margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
@@ -139,7 +141,35 @@ const SectionThree = styled.section`
 
 const ImagesWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: row; ;
+`;
+
+const ImgWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+const ImgBox = styled.div`
+  position: relative;
+  width: 100%;
+  height: ${props => props.height};
+  z-index: 1;
+  background-size: cover;
+  background-color: blue;
+  grid-column-start: ${props => props.col};
+  grid-column-end: ${props => props.col};
+  grid-row-start: ${props => props.row};
+  grid-row-end: ${props => props.row};
+`;
+
+const ImgMeta = styled.div`
+  position: absolute;
+  padding: 30px;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 `;
 
 const FlexBoxIndex = styled.div`
@@ -160,27 +190,15 @@ const FlexBoxIndex = styled.div`
   }
 `;
 const SectionFour = styled.section`
-  background-color: grey;
   color: #ffffff;
   text-align: center;
-  .header_section4 {
-    width: 66%;
-    margin: 0 auto;
-  }
-  .title__section4 {
-    font-size: 3rem;
-    padding: 1.35em 0;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 0.225em;
-    margin: 0;
-  }
+  display: flex;
+  justify-content: center;
   .grid__section4 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 66%;
-    margin: 0 auto;
-    padding: 3rem 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding: 1rem 0;
   }
   .grid__section4 > * {
     padding: 3rem;
@@ -231,6 +249,42 @@ const MyAnimation = styled.div`
   animation: 1.5s ${spin} infinite;
 `;
 
+/* STYLES FOR DETAILS  */
+
+const DetailsSection = styled.div`
+  &:after {
+    content: "";
+    display: block;
+    height: "80vh";
+    width: 100%;
+    background-image: ${props =>
+      props.different
+        ? "url('Showreel21Still.png')"
+        : "url('Showreel21Still.png')"};
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: ${props => (props.parallax ? "fixed" : "scroll")};
+  }
+`;
+
+const GenericDetail = styled.h3`
+  font-size: 3rem;
+  padding: ${props => (props.none ? "0" : "1.35em 0")};
+  color: black;
+  text-align: center;
+  letter-spacing: 0.6rem;
+  margin: 0;
+`;
+const GenereicParaAbout = styled.p`
+  margin: 20px;
+  text-align: left;
+  letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "0.225em")};
+  font-family: Fira Sans;
+  font-size: ${props => (props.lessSize ? "1.5rem" : "2.5rem")};
+  line-height: ${props => (props.lessSize ? "2rem" : "3rem")};
+`;
+
 /* // Create the keyframes
 const rotate = keyframes`
   from {
@@ -258,10 +312,16 @@ export {
   SectionTwo,
   SectionThree,
   ImagesWrapper,
+  ImgWrapper,
+  ImgMeta,
+  ImgBox,
   FlexBoxIndex,
   SectionFour,
   GenereicPara,
   GenericH2,
+  GenericDetail,
+  GenereicParaAbout,
   Header,
   Footer,
+  DetailsSection,
 };

@@ -34,11 +34,11 @@ export default ({ children }) => (
     </Header>
     {children}
     <Footer>
-      <div class="icons">
+      <div className="icons">
         <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth />
         <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
       </div>
-      <div class="copyright">
+      <div className="copyright">
         <span>&copy; 2021 | Philipp Kristian </span>
       </div>
     </Footer>

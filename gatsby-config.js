@@ -7,6 +7,8 @@
 module.exports = {
   plugins: [
     "gatsby-transformer-remark",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
@@ -16,6 +18,21 @@ module.exports = {
       options: {
         name: `clients`,
         path: `${__dirname}/src/clients/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Playfair Display`, `Fira Sans`],
+
+        display: "swap",
       },
     },
   ],

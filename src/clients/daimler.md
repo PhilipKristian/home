@@ -2,6 +2,8 @@
 title: Daimler Mobility
 hover: Creating a digital target picture for the future of mobility
 slug: daimler-mobility
+thumb: ../images/thumbs/Daimler.jpg
+clientDetail: ../images/clientDetail/Daimler.jpg
 ---
 
 The leadership team at Daimler Mobility Africa Asia Pacific wanted to define their regional digital target picture based on a strategic mandate to accelerate digital transformation. While the client already had significant digital presence, they lacked a holistic point of view with clear priorities and a unified approach. Specifically, they were looking for facilitation of this journey.
