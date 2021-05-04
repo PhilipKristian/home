@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
+import ReactPlayer from "react-player";
 
 import Layout from "../components/layout";
 import SingleImage from "../components/SingleImage";
@@ -23,12 +24,12 @@ import {
 
 /* import image01 from "../../static/PandG.jpg";
 import image02 from "../../static/Daimler.jpg"; */
-import image03 from "../../static/Deloitte.jpg";
+/* import image03 from "../../static/Deloitte.jpg";
 import image04 from "../../static/facebook.jpg";
 import image05 from "../../static/Microsoft.jpg";
 import image06 from "../../static/Salesforce.jpg";
 import image07 from "../../static/BMWi.jpg";
-import image08 from "../../static/Prudential.jpg";
+import image08 from "../../static/Prudential.jpg"; */
 
 const clients = [
   /*   {
@@ -39,7 +40,7 @@ const clients = [
     source: image02,
     title: "Daimler",
   }, */
-  {
+  /*   {
     source: image03,
     title: "Deloitte",
   },
@@ -62,7 +63,7 @@ const clients = [
   {
     source: image08,
     title: "Prudential",
-  },
+  }, */
 ];
 
 export default function Index({ data }) {
@@ -71,7 +72,7 @@ export default function Index({ data }) {
   const contact = data.contact.siteMetadata.contact;
   return (
     <Layout>
-      <section style={{ position: "relative" }}>
+      {/* <section style={{ position: "relative" }}>
         <Banner></Banner>
         <TextWrapper>
           <div>
@@ -82,9 +83,17 @@ export default function Index({ data }) {
           </div>
         </TextWrapper>
         <MoreText>Learn more </MoreText>
-      </section>
+      </section> */}
 
-      <SectionTwo></SectionTwo>
+      <div style={{ position: "relative", paddingTop: "56.25%" }}>
+        <ReactPlayer
+          url="https://vimeo.com/531560161"
+          style={{ position: "absolute", top: "0", left: "0" }}
+          loop={true}
+          width="100%"
+          height="100%"
+        />
+      </div>
 
       <SectionThree>
         <ImgWrapper>
@@ -97,7 +106,7 @@ export default function Index({ data }) {
             const r = index / 2 + 1;
             const c = (index % 2) + 1;
             return (
-              <ImgBox row={r} col={c} height="500px" key={client.id}>
+              <ImgBox row={r} col={c} height="600px" key={client.id}>
                 <Link
                   to={"/clients/" + client.frontmatter.slug}
                   key={client.id}

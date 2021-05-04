@@ -30,10 +30,10 @@ export default function ProjectDetails({ data }) {
                   position: "relative",
                   top: "80%",
                   marginLeft: "40px",
-                  fontSize: "4rem",
+                  fontSize: "30px",
                 }}
               >
-                {title}
+                {hover}
               </GenericH2>
             </ImgMeta>
           </ImgBox>
@@ -44,16 +44,16 @@ export default function ProjectDetails({ data }) {
           style={{
             textAlign: "left",
             marginLeft: "40px",
-            fontSize: "2rem",
+            fontSize: "31.24 px",
           }}
         >
-          {hover}
+          {title}
         </GenericDetail>
         {/* <GenericH3>{hover}</GenericH3> */}
         <GenereicParaAbout>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </GenereicParaAbout>
-        <SectionFour>
+        {/* <SectionFour>
           <div className="grid__section4">
             <Link to="/read">
               <div className="item1" style={{ backgroundColor: "#080c50" }}>
@@ -77,7 +77,7 @@ export default function ProjectDetails({ data }) {
               </div>
             </Link>
           </div>
-        </SectionFour>
+        </SectionFour> */}
       </DetailsSection>
     </Layout>
   );

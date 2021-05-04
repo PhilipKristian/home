@@ -9,7 +9,7 @@ const Header = styled.header`
   width: 100%;
   height: 30px;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: transparent;
   color: white;
   padding: 3rem 0;
   .menu_items {
@@ -18,11 +18,16 @@ const Header = styled.header`
   .menu_items > * {
     margin-right: 1rem;
   }
+  .logo {
+    display: inline-block;
+    width: 20%;
+  }
 `;
 
 const GenereicPara = styled.p`
   text-transform: uppercase;
   text-align: center;
+  padding-right: 50px;
   letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "0.225em")};
   font-family: Fira Sans;
   font-weight: bold;
@@ -119,19 +124,16 @@ const MoreText = styled.div`
 `;
 
 const SectionTwo = styled.div`
-  &:after {
-    content: "";
-    display: block;
-    height: ${props => (props.parallax ? "80vh" : "100vh")};
-    width: 100%;
-    background-image: ${props =>
-      props.different
-        ? "url('Showreel21Still.png')"
-        : "url('Showreel21Still.png')"};
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: ${props => (props.parallax ? "fixed" : "scroll")};
+  justify-content: center;
+  .player-wrapper {
+    position: relative;
+   /*  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */ */
+  }
+
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 `;
 const SectionThree = styled.section`

@@ -4,16 +4,27 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import { Header, Footer, GenericH2, GenereicPara } from "../styles/IndexStyles";
+import {
+  Header,
+  Footer,
+  GenericH2,
+  GenereicPara,
+  Logo,
+} from "../styles/IndexStyles";
 
 export default ({ children }) => (
   <div>
     <Header>
-      <GenericH2 none>
-        <Link to="/" style={{ color: "white" }}>
-          Philipp Kristian
-        </Link>
-      </GenericH2>
+      <Link to="/">
+        <div className="logo">
+          <img
+            src="Logos-WidePKD.png"
+            alt="PKLogo"
+            width={"70%"}
+            style={{ paddingTop: "30px" }}
+          />
+        </div>
+      </Link>
       <div className="menu_items">
         <Link to="/read">
           <GenereicPara lessSize lessSpacing grey>
