@@ -2,8 +2,8 @@
 title: RESET (World Scientific Publishing)
 para: RESET – Reimagining our World and Creating a Different Future
 slug: reset
-thumb: ../images/thumbs/BPESA.jpg
-clientDetail: ../images/clientDetail/BPESA.jpg
+thumb: ../images/books/readA.png
+bookDetail: ../images/books/readA.png
 link: https://www.worldscientific.com/worldscibooks/10.1142/12023
 ---
 

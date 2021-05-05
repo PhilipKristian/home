@@ -2,8 +2,8 @@
 title: The Trust Economy (Marshall Cavendish, Springer)
 para: RESET – Reimagining our World and Creating a Different Future
 slug: reset
-thumb: ../images/thumbs/BPESA.jpg
-clientDetail: ../images/clientDetail/BPESA.jpg
+thumb: ../images/books/readB.png
+bookDetail: ../images/books/readB.png
 link: https://www.marshallcavendish.com/our-books/categories/books/the-trust-economy-p9789814751667
 ---
 
