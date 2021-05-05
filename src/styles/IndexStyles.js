@@ -7,9 +7,9 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: 50px;
   position: fixed;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.01);
   color: white;
   padding: 3rem 0;
   .menu_items {

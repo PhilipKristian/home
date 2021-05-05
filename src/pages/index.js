@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import ReactPlayer from "react-player";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import SingleImage from "../components/SingleImage";
 
 import {
