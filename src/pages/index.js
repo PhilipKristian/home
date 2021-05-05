@@ -92,6 +92,7 @@ export default function Index({ data }) {
           loop={true}
           width="100%"
           height="100%"
+          light="/Showreel21Still.png"
         />
       </div>
 
