@@ -3,10 +3,10 @@ title: Microsoft
 hover: Leading with trust in digital transformation
 slug: microsoft
 thumb: ../images/thumbs/Microsoft.jpg
-clientDetail: ../images/clientDetail/Microsoft_Detail.jpg
+clientDetail: ../images/clientDetail/Microsoft.jpg
 ---
 
-#### Leading Asia’s digital transformation with trust
+### Leading Asia’s digital transformation with trust
 
 Microsoft products are pivotal to how the world works. As an organization committed to digital transformation and empowering every person and organization to achieve more, Microsoft understands the dynamics involved in adopting new technologies. The company also has a long-standing perspective on trust and the important role trust plays in digital transformation.
 

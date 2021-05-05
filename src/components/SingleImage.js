@@ -41,9 +41,11 @@ const SingleImage = props => {
   return (
     <ImgContainer>
       <Img src={props.client.source} />
-      <ImgMeta>
-        <GenericH2>{props.client.title}</GenericH2>
-      </ImgMeta>
+      <Link to={props.client.link}>
+        <ImgMeta>
+          <GenericH2>{props.client.title}</GenericH2>
+        </ImgMeta>
+      </Link>
     </ImgContainer>
   );
 };

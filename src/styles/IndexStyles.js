@@ -1,5 +1,9 @@
 import styled, { keyframes } from "styled-components";
 
+const media = {
+  desktop: "@media(min-width: 1000px)",
+};
+
 const Header = styled.header`
   z-index: 30;
   font-family: Playfair Display;
@@ -143,7 +147,12 @@ const SectionThree = styled.section`
 
 const ImagesWrapper = styled.div`
   display: flex;
-  flex-direction: row; ;
+  flex-flow: column nowrap;
+
+  ${media.desktop} {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 `;
 
 const ImgWrapper = styled.div`
@@ -271,7 +280,8 @@ const DetailsSection = styled.div`
 `;
 
 const GenericDetail = styled.h3`
-  font-size: 3rem;
+  font-size: 2rem;
+  font-family: Playfair Display;
   padding: ${props => (props.none ? "0" : "1.35em 0")};
   color: black;
   text-align: center;
@@ -283,8 +293,8 @@ const GenereicParaAbout = styled.p`
   text-align: left;
   letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "0.225em")};
   font-family: Fira Sans;
-  font-size: ${props => (props.lessSize ? "1.5rem" : "2.5rem")};
-  line-height: ${props => (props.lessSize ? "2rem" : "3rem")};
+  font-size: 18px;
+  line-height: 2.5rem;
 `;
 
 /* // Create the keyframes

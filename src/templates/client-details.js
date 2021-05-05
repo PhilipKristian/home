@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../components/layout";
+import EngagementTiles from "../components/EngagementTiles";
 import * as styles from "../styles/client-details.module.css";
 import {
   GenericH2,
@@ -14,6 +15,7 @@ import {
   SectionFour,
   GenereicPara,
 } from "../styles/IndexStyles";
+import { ReadSection, GenereicParaRead } from "../styles/ReadStyles";
 
 export default function ProjectDetails({ data }) {
   const { html } = data.markdownRemark;
@@ -28,9 +30,9 @@ export default function ProjectDetails({ data }) {
               <GenericH2
                 style={{
                   position: "relative",
-                  top: "80%",
-                  marginLeft: "40px",
-                  fontSize: "30px",
+                  top: "85%",
+                  left: "1%",
+                  fontSize: "20px",
                 }}
               >
                 {hover}
@@ -40,19 +42,12 @@ export default function ProjectDetails({ data }) {
         </div>
       </section>
       <DetailsSection>
-        <GenericDetail
-          style={{
-            textAlign: "left",
-            marginLeft: "40px",
-            fontSize: "31.24 px",
-          }}
-        >
-          {title}
-        </GenericDetail>
-        {/* <GenericH3>{hover}</GenericH3> */}
-        <GenereicParaAbout>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </GenereicParaAbout>
+        <ReadSection white>
+          <h5>{title}</h5>
+          <GenereicParaAbout>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </GenereicParaAbout>
+        </ReadSection>
         {/* <SectionFour>
           <div className="grid__section4">
             <Link to="/read">
@@ -79,6 +74,7 @@ export default function ProjectDetails({ data }) {
           </div>
         </SectionFour> */}
       </DetailsSection>
+      <EngagementTiles />
     </Layout>
   );
 }
