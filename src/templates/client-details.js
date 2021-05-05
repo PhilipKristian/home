@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import * as styles from "../styles/client-details.module.css";
 import {
   GenericH2,
