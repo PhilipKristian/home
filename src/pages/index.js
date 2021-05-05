@@ -1,213 +1,234 @@
 import React, { Component } from "react";
-import { Link } from "gatsby";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHeart, faCode, faGem, fas } from "@fortawesome/free-solid-svg-icons";
-import {
-  fab,
-  faHtml5,
-  faJs,
-  faReact,
-  faCss3,
-  faGalacticSenate,
-} from "@fortawesome/free-brands-svg-icons";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import ReactPlayer from "react-player";
 
 import Layout from "../components/layout";
+import SingleImage from "../components/SingleImage";
 
 import {
   Banner,
   TextWrapper,
   MoreText,
-  MyAnimation,
+  ImagesWrapper,
   SectionTwo,
   SectionThree,
   SectionFour,
   FlexBoxIndex,
   GenereicPara,
   GenericH2,
+  ImgWrapper,
+  ImgBox,
+  ImgMeta,
 } from "../styles/IndexStyles";
 
-library.add(faHeart, faCode, faGem, fab, fas);
+/* import image01 from "../../static/PandG.jpg";
+import image02 from "../../static/Daimler.jpg"; */
+/* import image03 from "../../static/Deloitte.jpg";
+import image04 from "../../static/facebook.jpg";
+import image05 from "../../static/Microsoft.jpg";
+import image06 from "../../static/Salesforce.jpg";
+import image07 from "../../static/BMWi.jpg";
+import image08 from "../../static/Prudential.jpg"; */
 
-export default () => (
-  <Layout>
-    <section style={{ position: "relative" }}>
-      <Banner></Banner>
-      <TextWrapper>
-        <div>
-          {/* <MyAnimation /> */}
-          <GenericH2>EUJURIKA</GenericH2>
-          <GenereicPara>
-            One Stop for <br />
-            all you development <br />
-            and design needs
-          </GenereicPara>
-          <Link to="/works">MY WORK</Link>
-        </div>
-      </TextWrapper>
-      <MoreText>Learn more about me</MoreText>
-    </section>
-    <SectionTwo>
-      <div>
-        <GenericH2>MY PASSION</GenericH2>
-        <GenereicPara lessSize grey>
-          Most good programmers do programming not because they expect to get
-          paid, <br /> but bacause it's fun to program
-        </GenereicPara>
-        <h5> - Linus Torvalds</h5>
+const clients = [
+  /*   {
+    source: image01,
+    title: "P&G",
+  },
+  {
+    source: image02,
+    title: "Daimler",
+  }, */
+  /*   {
+    source: image03,
+    title: "Deloitte",
+  },
+  {
+    source: image04,
+    title: "Facebook",
+  },
+  {
+    source: image05,
+    title: "Microsoft",
+  },
+  {
+    source: image06,
+    title: "Salesforce",
+  },
+  {
+    source: image07,
+    title: "BMWi",
+  },
+  {
+    source: image08,
+    title: "Prudential",
+  }, */
+];
+
+export default function Index({ data }) {
+  const clients = data.clients.nodes;
+  console.log(clients[0].frontmatter.thumb.childImageSharp.fluid);
+  const contact = data.contact.siteMetadata.contact;
+  return (
+    <Layout>
+      {/* <section style={{ position: "relative" }}>
+        <Banner></Banner>
+        <TextWrapper>
+          <div>
+            <GenereicPara>
+              Trust makes our complex world simple. <br /> Make it yours to
+              lead, transform and innovate.
+            </GenereicPara>
+          </div>
+        </TextWrapper>
+        <MoreText>Learn more </MoreText>
+      </section> */}
+
+      <div style={{ position: "relative", paddingTop: "56.25%" }}>
+        <ReactPlayer
+          url="https://vimeo.com/531560161"
+          style={{ position: "absolute", top: "0", left: "0" }}
+          loop={true}
+          width="100%"
+          height="100%"
+        />
       </div>
-      <span>
-        <FontAwesomeIcon
-          icon="gem"
-          color="white"
-          size="6x"
-          style={{ marginRight: "3rem" }}
-          fixedWidth
-          border
-        />
-        <FontAwesomeIcon
-          icon="heart"
-          color="white"
-          size="6x"
-          style={{ marginRight: "3rem" }}
-          fixedWidth
-          border
-        />
-        <FontAwesomeIcon
-          icon="code"
-          color="white"
-          size="6x"
-          fixedWidth
-          border
-        />
-      </span>
-    </SectionTwo>
-    <SectionThree>
+
+      <SectionThree>
+        <ImgWrapper>
+          {clients.map((client, index) => {
+            console.log("index", index);
+            /* client 1  index 0   0 / 2 = 0 (+ 1) -> row = 1, 0 % 2 = 0 (+ 1) col = 1 */
+            /* client 2  index 1   1 / 2 = 0 (+ 1) -> row = 1, 1 % 2 = 1 (+ 1) col = 2 */
+            /* client 3  index 2   2 / 2 = 1 (+ 1) -> row = 2, 2 % 2 = 0 (+ 1) col = 1 */
+            /* client 4  index 3   3 / 2 = 1 (+ 1) -> row = 2, 3 % 2 = 1 (+ 1) col = 2 */
+            const r = index / 2 + 1;
+            const c = (index % 2) + 1;
+            return (
+              <ImgBox row={r} col={c} height="600px" key={client.id}>
+                <Link
+                  to={"/clients/" + client.frontmatter.slug}
+                  key={client.id}
+                  style={{ width: "100%", height: "100%" }}
+                >
+                  <Img
+                    fluid={client.frontmatter.thumb.childImageSharp.fluid}
+                    style={{ width: "100%", height: "100%", zIndex: 1 }}
+                    objectFit="cover"
+                  />
+
+                  <ImgMeta>
+                    <GenericH2
+                      style={{
+                        position: "relative",
+                        top: "70%",
+                      }}
+                    >
+                      {client.frontmatter.title}
+                    </GenericH2>
+                  </ImgMeta>
+                </Link>
+              </ImgBox>
+            );
+          })}
+        </ImgWrapper>
+
+        {/* {clients.map(client => {
+          return (
+          
+           <Link to={"/clients/" + client.frontmatter.slug} key={client.id}>
+              <GenericH2>{client.frontmatter.title}</GenericH2>
+              <Img fluid={client.frontmatter.thumb.childImageSharp.fluid} />
+            </Link>
+          );
+
+          {
+            <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
+              <div>
+                <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
+                <h3>{ project.frontmatter.title }</h3>
+                <p>{ project.frontmatter.stack }</p>
+              </div>
+            </Link>
+          }
+
+          <Link to={"/clients/" + clients.frontmatter.slug} key={clients.id}>
+            <GenericH2>{clients.frontmatter.title}</GenericH2>
+            <ImagesWrapper>
+              <Img fluid={clients.frontmatter.thumb.childImageSharp.fluid} />
+            </ImagesWrapper>
+          </Link>
+        })} */}
+
+        {/*  <ImagesWrapper>
+          <SingleImage client={clients[2]} />
+          <SingleImage client={clients[3]} />
+        </ImagesWrapper>
+        <ImagesWrapper>
+          <SingleImage client={clients[4]} />
+          <SingleImage client={clients[5]} />
+        </ImagesWrapper>
+        <ImagesWrapper>
+          <SingleImage client={clients[6]} />
+          <SingleImage client={clients[7]} />
+        </ImagesWrapper> */}
+        {/* <FlexBoxIndex></FlexBoxIndex> */}
+        {/*   <FlexBoxIndex>
+        <div className="image">
+          <img src="Deloitte.jpg" alt="Deloitte" />
+        </div>
+        <div className="image">
+          <img src="facebook.jpg" alt="facebook" />
+        </div>
+      </FlexBoxIndex>
       <FlexBoxIndex>
         <div className="image">
-          <img src="pic01.jpg" alt="pic01" />
-        </div>
-        <div className="text_section3">
-          <GenericH2 none>Website Development</GenericH2>
-          <GenereicPara lessSize lessSpacing>
-            I handcode beautiful websites using HTML5, CSS3, JS - because they
-            are full customizable and efficient. <br /> No WordPress websites
-            here.
-          </GenereicPara>
-        </div>
-      </FlexBoxIndex>
-      <FlexBoxIndex inverse>
-        <div className="text_section3">
-          <GenericH2 none>Website Design</GenericH2>
-          <GenereicPara lessSize lessSpacing>
-            Design beautiful and usable websites.
-          </GenereicPara>
+          <img src="Microsoft.jpg" alt="Microsoft" />
         </div>
         <div className="image">
-          <img src="pic02.jpg" alt="pic02" />
+          <img src="Salesforce.jpg" alt="Salesforce" />
         </div>
       </FlexBoxIndex>
       <FlexBoxIndex>
         <div className="image">
-          <img src="pic03.jpg" alt="pic03" />
+          <img src="BMWi.jpg" alt="BMWi" />
         </div>
-        <div className="text_section3">
-          <GenericH2 none>Mobile App Development</GenericH2>
-          <GenereicPara lessSize lessSpacing>
-            I develop Mobile apps in React Native, which can be used in both ios
-            and Android.
-          </GenereicPara>
+        <div className="image">
+          <img src="Prudential.jpg" alt="Prudential" />
         </div>
-      </FlexBoxIndex>
-    </SectionThree>
-    <SectionFour>
-      <div className="header__section4">
-        <div className="title__section4">MY Technologies</div>
-      </div>
-      <div className="grid__section4">
-        <div className="item1" style={{ backgroundColor: "#2b343d" }}>
-          <div className="flex__section4">
-            <FontAwesomeIcon
-              icon={faReact}
-              color="#ed4933"
-              size="3x"
-              fixedWidth
-            />
-            <GenericH2 none>React</GenericH2>
-          </div>
-          <GenereicPara lessSize lessSpacing grey>
-            Modern JavaScript framework which will make your web application
-            extremely fast and, at the same time, handy for every user.
-          </GenereicPara>
-        </div>
-        <div className="item2" style={{ backgroundColor: "#4D0000" }}>
-          <div className="flex__section4">
-            <FontAwesomeIcon icon="code" color="#ed4933" size="3x" fixedWidth />
-            <GenericH2 none>React Native</GenericH2>
-          </div>
-          <GenereicPara lessSize lessSpacing grey>
-            Cross-platform for mobile app development based on Javascript, whose
-            resulting code is compiled to Android and iOS.
-          </GenereicPara>
-        </div>
-        <div className="item3" style={{ backgroundColor: "#4D0000" }}>
-          <div className="flex__section4">
-            <FontAwesomeIcon icon={faJs} color="#ed4933" size="3x" fixedWidth />
-            <GenericH2 none>JavaScript</GenericH2>
-          </div>
-          <GenereicPara lessSize lessSpacing grey>
-            JavaScript is the language of the web. It is used for Web
-            development, mobile development and app development and everything
-            else.
-          </GenereicPara>
-        </div>
-        <div className="item4" style={{ backgroundColor: "#2b343d" }}>
-          <div className="flex__section4">
-            <FontAwesomeIcon
-              icon={faHtml5}
-              color="#ed4933"
-              size="3x"
-              fixedWidth
-            />
-            <GenericH2 none>HTML5</GenericH2>
-          </div>
-          <GenereicPara lessSize lessSpacing grey>
-            HTML, a standardized system for tagging text files to achieve font,
-            colour, graphic, and hyperlink effects on World Wide Web pages.
-          </GenereicPara>
-        </div>
-        <div className="item5" style={{ backgroundColor: "#2b343d" }}>
-          <div className="flex__section4">
-            <FontAwesomeIcon
-              icon={faCss3}
-              color="#ed4933"
-              size="3x"
-              fixedWidth
-            />
-            <GenericH2 none>CSS3</GenericH2>
-          </div>
-          <GenereicPara lessSize lessSpacing grey>
-            CSS is a style sheet language used for describing the presentation
-            of a document written in a markup language like HTML.
-          </GenereicPara>
-        </div>
-        <div className="item6" style={{ backgroundColor: "#4D0000" }}>
-          <div className="flex__section4">
-            <FontAwesomeIcon
-              icon={faGalacticSenate}
-              color="#ed4933"
-              size="3x"
-              fixedWidth
-            />
-            <GenericH2 none>Gatsby</GenericH2>
-          </div>
-          <GenereicPara lessSize lessSpacing grey>
-            Gatsby is a free and open source framework based on React that helps
-            developers build blazing fast websites and apps
-          </GenereicPara>
-        </div>
-      </div>
-    </SectionFour>
-  </Layout>
-);
+      </FlexBoxIndex> */}
+      </SectionThree>
+    </Layout>
+  );
+}
+
+// export page query
+
+export const query = graphql`
+  query ClientsPage {
+    clients: allMarkdownRemark {
+      nodes {
+        frontmatter {
+          title
+          hover
+          slug
+          thumb {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        id
+      }
+    }
+    contact: site {
+      siteMetadata {
+        contact
+        phone
+      }
+    }
+  }
+`;

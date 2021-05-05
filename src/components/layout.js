@@ -1,39 +1,56 @@
 import React from "react";
 import { Link } from "gatsby";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { Header, Footer, GenericH2, GenereicPara } from "../styles/IndexStyles";
+
+import {
+  Header,
+  Footer,
+  GenericH2,
+  GenereicPara,
+  Logo,
+} from "../styles/IndexStyles";
 
 export default ({ children }) => (
   <div>
     <Header>
-      <GenericH2 none>
-        <Link to="/" style={{ color: "white" }}>
-          EUJURIKA
-        </Link>
-      </GenericH2>
+      <Link to="/">
+        <div className="logo">
+          <img
+            src="Logos-WidePKD.png"
+            alt="PKLogo"
+            width={"70%"}
+            style={{ paddingTop: "30px" }}
+          />
+        </div>
+      </Link>
       <div className="menu_items">
-        <Link to="/works">
+        <Link to="/read">
           <GenereicPara lessSize lessSpacing grey>
-            Works
+            Read
           </GenereicPara>
         </Link>
-        <Link to="/about">
+        <Link to="/experience">
           <GenereicPara lessSize lessSpacing grey>
-            About
+            Experience
+          </GenereicPara>
+        </Link>
+        <Link to="/create">
+          <GenereicPara lessSize lessSpacing grey>
+            Create
           </GenereicPara>
         </Link>
       </div>
     </Header>
     {children}
     <Footer>
-      <div class="icons">
+      <div className="icons">
         <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth />
         <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
       </div>
-      <div class="copyright">
-        <span>&copy; 2021, Eujurika | </span>
-        <span> Made with ❤️ and ☕️ in Bremen </span>
+      <div className="copyright">
+        <span>&copy; 2021 | Philipp Kristian </span>
       </div>
     </Footer>
   </div>

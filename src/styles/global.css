@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 10px;
-  font-weight: 400;
+  /* font-weight: 400; */
   letter-spacing: 0.075em;
   margin: 0;
 }
@@ -11,7 +11,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: "Playfair Display, Fira Sans";
   padding: 0;
   margin: 0;
 }
