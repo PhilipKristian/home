@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import ReactPlayer from "react-player";
 
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import SingleImage from "../components/SingleImage";
 
 import {
@@ -136,7 +136,7 @@ export default function Index({ data }) {
 
         {/* {clients.map(client => {
           return (
-          
+
            <Link to={"/clients/" + client.frontmatter.slug} key={client.id}>
               <GenericH2>{client.frontmatter.title}</GenericH2>
               <Img fluid={client.frontmatter.thumb.childImageSharp.fluid} />
