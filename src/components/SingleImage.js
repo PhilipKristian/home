@@ -34,14 +34,16 @@ const Img = styled.img`
   cursor: pointer;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: cover;<
 `;
 
 const SingleImage = props => {
   return (
     <ImgContainer>
-      {/*  <Img src={props.client.source} /> */}
-      <ImgMeta>{/*  <GenericH2>{props.client.title}</GenericH2> */}</ImgMeta>
+      <Img src={props.client.source} />
+      <ImgMeta>
+        <GenericH2>{props.client.title}</GenericH2>
+      </ImgMeta>
     </ImgContainer>
   );
 };

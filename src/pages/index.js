@@ -92,6 +92,7 @@ export default function Index({ data }) {
           loop={true}
           width="100%"
           height="100%"
+          light="/Showreel21Still.png"
         />
       </div>
 
@@ -136,7 +137,7 @@ export default function Index({ data }) {
 
         {/* {clients.map(client => {
           return (
-          
+
            <Link to={"/clients/" + client.frontmatter.slug} key={client.id}>
               <GenericH2>{client.frontmatter.title}</GenericH2>
               <Img fluid={client.frontmatter.thumb.childImageSharp.fluid} />

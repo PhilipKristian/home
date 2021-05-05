@@ -18,9 +18,9 @@ export default ({ children }) => (
       <Link to="/">
         <div className="logo">
           <img
-            src="Logos-WidePKD.png"
+            src="/Logos-WidePKD.png"
             alt="PKLogo"
-            width={"70%"}
+            width={"200"}
             style={{ paddingTop: "30px" }}
           />
         </div>
