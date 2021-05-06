@@ -60,13 +60,13 @@ const ReadTextWrapper = styled.div`
 const GenereicParaRead = styled.p`
   text-align: left;
   font-family: Fira Sans;
-  letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "0.225em")};
+
   font-size: 18px;
   color: ${props => (props.grey ? "#4E4852" : "#ffffff")};
 `;
 const ReadSection = styled.section`
   background-color: ${props => (props.white ? "#ffffff" : "#21b2a6")};
-  text-align: center;
+  text-align: left;
   margin-top: ${props => (props.less ? "30px" : "50px")};
   margin-bottom: 50px;
   padding: ${props => (props.more ? "3rem 0" : "2rem 0")};
@@ -76,10 +76,8 @@ const ReadSection = styled.section`
   }
   h5 {
     color: black;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: Playfair Display;
-    letter-spacing: 0.225em;
-    padding-bottom: 0.5rem;
     margin: 62px;
     text-align: left;
   }
@@ -87,9 +85,15 @@ const ReadSection = styled.section`
     color: black;
     font-size: 3rem;
     font-family: Playfair Display;
-    letter-spacing: 0.225em;
     margin-bottom: 50px;
     text-align: left;
+  }
+  h2 {
+    color: grey;
+    font-size: 2rem;
+    font-family: Playfair Display;
+    padding-left: 80px;
+    margin-bottom: 70px;
   }
   a {
     background: rgb(255, 0, 133);

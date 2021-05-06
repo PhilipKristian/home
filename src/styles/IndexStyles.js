@@ -291,10 +291,12 @@ const GenericDetail = styled.h3`
 const GenereicParaAbout = styled.p`
   margin: 20px;
   text-align: left;
-  letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "0.225em")};
   font-family: Fira Sans;
   font-size: 18px;
   line-height: 2.5rem;
+  h2 {
+    text-align: left;
+  }
 `;
 
 /* // Create the keyframes

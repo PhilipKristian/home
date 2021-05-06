@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import EngagementTiles from "../components/EngagementTiles";
 import CTA from "../components/CTA";
+import CTAGradient from "../components/CTAGradient";
 import {
   ReadBannerA,
   GenereicParaRead,
@@ -20,9 +21,11 @@ const reset = () => {
           contemplate and plan for our Vision 2030. Your message set the tone
           for the conference, and we received fantastic reviews of your
           performance from everyone!’
-          <br />– Chief Executive Officer, Business Process Enabling South
-          Africa
+          <h2>
+            – Chief Executive Officer, Business Process Enabling South Africa
+          </h2>
         </h5>
+
         <div>
           <GenereicParaRead lessSize grey>
             Engage Philipp Kristian to deliver a transformational keynote
@@ -50,7 +53,7 @@ const reset = () => {
         </div>
       </ReadSection>
       <EngagementTiles />
-      <CTA />
+      <CTAGradient />
     </Layout>
   );
 };
