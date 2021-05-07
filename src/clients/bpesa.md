@@ -6,7 +6,7 @@ thumb: ../images/thumbs/BPESA.jpg
 clientDetail: ../images/clientDetail/BPESA.jpg
 ---
 
-### Enhancing South Africa’s Brand as a Destination for Service Excellence
+##### Enhancing South Africa’s Brand as a Destination for Service Excellence
 
 Great customer service is the result of customers trusting a brand. Equally, it is the result of employers and service providers
 trusting their people to lead with empathy and perform at peak. This is precisely what the Business Process Outsourcing (BPO)

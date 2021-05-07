@@ -1,32 +1,47 @@
 import React from "react";
 import styled from "styled-components";
 
+const media = {
+  desktop: "@media(min-width: 1000px)",
+};
+
 const GenericH2 = styled.h2`
-  text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: Fira Sans;
   text-align: center;
   z-index: 2;
-  line-height: 1rem;
 
   color: ${props => (props.dark ? "#4E4852" : "#ffffff")};
+  ${media.desktop} {
+    font-size: 3rem;
+  }
 `;
 const Section = styled.section`
   display: flex;
-  flex-flow; row;
+  flex-flow: column nowrap;
+  justify-content: "center";
   color: #ffffff;
+  ${media.desktop} {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 `;
 
 const Box = styled.div`
-  padding: 40px;
   width: 100%;
-  height: 250px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgb(255, 0, 133);
   background: linear-gradient(
     65deg,
     rgba(255, 0, 133, 1) 20%,
     rgba(248, 8, 8, 1) 50%
   );
+  ${media.desktop} {
+    height: 250px;
+  }
 `;
 const BoxBlue = styled.div`
   width: 100%;
@@ -56,19 +71,20 @@ const CTAGradient = props => {
           <GenericH2 none>
             Book the calendar
             <a href="https://calendly.com/philippkristian">
-              <GenericH2>schedule now an intro</GenericH2>
+              <GenericH2>Schedule an intro </GenericH2>
+            </a>
+            <a href="mailto:lv@philippkristian.com">
+              <GenericH2>Keynote speaking availability </GenericH2>
             </a>
           </GenericH2>
         </Box>
         <Box>
-          <GenericH2 none>For media enquiries contact:</GenericH2>
-          <GenericH2>
-            <br />
-            Lindsey Palma
+          <GenericH2 none>
+            For media enquiries contact:
+            <a href="mailto:lp@philippkristian.com ">
+              <GenericH2>lp@philippkristian.com </GenericH2>
+            </a>
           </GenericH2>
-          <a href="mailto:lp@philippkristian.com ">
-            <GenericH2>lp@philippkristian.com </GenericH2>
-          </a>
         </Box>
       </Section>
     </div>

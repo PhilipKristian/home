@@ -6,7 +6,7 @@ thumb: ../images/thumbs/Deloitte.jpg
 clientDetail: ../images/clientDetail/Deloitte.jpg
 ---
 
-## Inspiring CFOs to win in a disruptive world
+##### Inspiring CFOs to win in a disruptive world
 
 In 2019, Deloitte China hosted an inaugural client event exploring the future of finance. Aptly titled CFO Vision, the conference took place in Hong Kong. It brought together senior leaders and executives across financial services, centering around the theme of winning in a disruptive world.
 

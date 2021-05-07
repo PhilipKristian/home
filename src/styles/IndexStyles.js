@@ -16,6 +16,7 @@ const Header = styled.header`
   background-color: rgba(0, 0, 0, 0.01);
   color: white;
   padding: 3rem 0;
+  }
   .menu_items {
     display: flex;
   }
@@ -24,15 +25,24 @@ const Header = styled.header`
   }
   .logo {
     display: inline-block;
-    width: 20%;
+    padding-top: 10px;
+    padding-left: 16px;
   }
+  ${media.desktop} {
+    .logo {
+      padding-top: 20px;
+      padding-left: 36px;
+    }
+`;
+
+const LogoImg = styled.img`
+  width: 200;
 `;
 
 const GenereicPara = styled.p`
   text-transform: uppercase;
   text-align: center;
   padding-right: 50px;
-  letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "0.225em")};
   font-family: Fira Sans;
   font-weight: bold;
   font-size: ${props => (props.lessSize ? "1.5rem" : "2.5rem")};
@@ -41,11 +51,10 @@ const GenereicPara = styled.p`
 `;
 
 const GenericH2 = styled.h2`
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: Fira Sans;
   padding: ${props => (props.none ? "0" : "0.5em 0")};
   color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.6rem;
   margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
 `;
 
@@ -157,7 +166,11 @@ const ImagesWrapper = styled.div`
 
 const ImgWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  ${media.desktop} {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const ImgBox = styled.div`
@@ -167,10 +180,6 @@ const ImgBox = styled.div`
   z-index: 1;
   background-size: cover;
   background-color: blue;
-  grid-column-start: ${props => props.col};
-  grid-column-end: ${props => props.col};
-  grid-row-start: ${props => props.row};
-  grid-row-end: ${props => props.row};
 `;
 
 const ImgMeta = styled.div`
@@ -181,6 +190,15 @@ const ImgMeta = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
+`;
+
+const VideoMeta = styled.div`
+  position: absolute;
+  z-index: 2;
+  top: 53%;
+  right: 0;
+  bottom: 0;
+  left: 20%;
 `;
 
 const FlexBoxIndex = styled.div`
@@ -226,19 +244,20 @@ const SectionFour = styled.section`
 `;
 
 const Footer = styled.footer`
-  padding: 6em 0 4em 0;
-  background-color: #2b343d;
-  text-align: center;
+  background-color: #080c50;
+  font-family: Fira Sans;
+  display: flex;
+  height: 120px;
+  padding: 30px;
+  justify-content: space-between;
   .icons > * {
     cursor: pointer;
     margin-right: 1rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
   }
   .copyright {
     color: white;
-    )font-size: 1.2rem;
-    letter-spacing: 0.225em;
-    padding: 0;
+    font-size: 1.2rem;
     text-transform: uppercase;
     margin-top: 1rem;
   }
@@ -289,9 +308,9 @@ const GenericDetail = styled.h3`
   margin: 0;
 `;
 const GenereicParaAbout = styled.p`
-  margin: 20px;
   text-align: left;
   font-family: Fira Sans;
+  color: #080c50;
   font-size: 18px;
   line-height: 2.5rem;
   h2 {
@@ -338,4 +357,6 @@ export {
   Header,
   Footer,
   DetailsSection,
+  VideoMeta,
+  LogoImg,
 };

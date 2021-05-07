@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import ReactPlayer from "react-player";
+import EngagementTiles from "../components/EngagementTiles";
 
 import Layout from "../components/Layout";
 import SingleImage from "../components/SingleImage";
@@ -20,6 +21,7 @@ import {
   ImgWrapper,
   ImgBox,
   ImgMeta,
+  VideoMeta,
 } from "../styles/IndexStyles";
 
 /* import image01 from "../../static/PandG.jpg";
@@ -89,10 +91,11 @@ export default function Index({ data }) {
         <ReactPlayer
           url="https://vimeo.com/531560161"
           style={{ position: "absolute", top: "0", left: "0" }}
+          playing={true}
           loop={true}
           width="100%"
           height="100%"
-          light="/Showreel21Still.png"
+          light="/pk01.png"
         />
       </div>
 
@@ -123,7 +126,7 @@ export default function Index({ data }) {
                     <GenericH2
                       style={{
                         position: "relative",
-                        top: "70%",
+                        top: "85%",
                       }}
                     >
                       {client.frontmatter.title}
@@ -200,6 +203,7 @@ export default function Index({ data }) {
         </div>
       </FlexBoxIndex> */}
       </SectionThree>
+      <EngagementTiles />
     </Layout>
   );
 }

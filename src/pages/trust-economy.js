@@ -15,11 +15,11 @@ const trustEconomy = () => {
         <ReadBannerA img={"/readB.png"}></ReadBannerA>
       </section>
       <ReadSection white>
-        <h5>
-          The Trust Economy – How Digital Technology is Transforming Trust and
-          Creating Social and Business Innovation
-        </h5>
         <div>
+          <h5>
+            The Trust Economy – <br /> How Digital Technology is Transforming
+            Trust and Creating Social and Business Innovation
+          </h5>
           <GenereicParaRead lessSize grey>
             Over the past decade, one of the most revolutionary changes in our
             global economy has been the creation of trusted digital
@@ -41,9 +41,11 @@ const trustEconomy = () => {
             the opportunities and challenges of the digital age.
           </GenereicParaRead>
         </div>
-        <Link to="https://www.marshallcavendish.com/our-books/categories/books/the-trust-economy-p9789814751667">
-          Read it
-        </Link>
+        <div>
+          <Link to="https://www.marshallcavendish.com/our-books/categories/books/the-trust-economy-p9789814751667">
+            Read it
+          </Link>
+        </div>
       </ReadSection>
       <EngagementTiles />
     </Layout>

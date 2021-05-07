@@ -6,7 +6,7 @@ thumb: ../images/thumbs/PandG.jpg
 clientDetail: ../images/clientDetail/P&G.jpg
 ---
 
-## Driving Customer-Centric Innovation in the Trust Economy
+##### Driving Customer-Centric Innovation in the Trust Economy
 
 Organisations and brands that trust their customers receive trust in return. The Trust Economy isn’t just a global trend worth embracing – it is an invitation to reconsider the essence of business, brands and humanity. Business is nothing without relationships, and relationships are built on trust. Mutual trust doesn’t just make sense from a commercial point of view, it also helps organisations become purpose-driven and stand up for a worthy cause.
 

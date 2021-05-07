@@ -15,17 +15,16 @@ const stGallenSymposium = () => {
       <section style={{ position: "relative" }}>
         <ReadBannerA img={"/readC.png"}></ReadBannerA>
       </section>
-      <ReadSection white>
-        <h5>
-          How the Trust Economy Could Benefit Us All <br /> (St. Gallen
-          Symposium)
-        </h5>
+      <ReadSection white lessM>
         <div>
-          <GenereicPara style={{ fontWeight: "bold" }}>
-            Trust matters: <br />
-            Why Exiting This Crisis Will Require a New Mindset Centered Around
-            Trust{" "}
-          </GenereicPara>
+          <h5 style={{ margineBottom: "31px" }}>
+            How the Trust Economy Could Benefit Us All <br /> (St. Gallen
+            Symposium)
+          </h5>
+          <GenereicParaRead>
+            Trust matters: Why Exiting This Crisis Will Require a New Mindset
+            Centered Around Trust
+          </GenereicParaRead>
           <GenereicParaRead lessSize grey>
             Economists have argued (and proven) for decades that trust is the
             pivotal ingredient to economic and social wellbeing.
@@ -49,7 +48,7 @@ const stGallenSymposium = () => {
             expertise of a global trust and innovation keynote speaker to anchor
             the chosen topic, Trust Matters.
           </GenereicParaRead>
-          <GenereicParaRead lessSize grey>
+          <GenereicParaRead lessSize grey style={{ paddingBottom: "30px" }}>
             In this special format, the Forum was designed to run as a live
             in-person event in Singapore with livestreamed virtual sessions from
             St. Gallen and New York. Prior to the event, the organizing
@@ -64,10 +63,10 @@ const stGallenSymposium = () => {
             Philipp Kristian as a special guest in celebrating this occasion and
             the global importance of trust.
           </GenereicParaRead>
+          <Link to="https://www.symposium.org/articles/how-trust-economy-could-benefit-us-all">
+            Read it
+          </Link>
         </div>
-        <Link to="https://www.symposium.org/articles/how-trust-economy-could-benefit-us-all">
-          Read it
-        </Link>
       </ReadSection>
       <EngagementTiles />
     </Layout>

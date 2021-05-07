@@ -43,7 +43,9 @@ const SingleImage = props => {
       <Img src={props.client.source} />
       <Link to={props.client.link}>
         <ImgMeta>
-          <GenericH2>{props.client.title}</GenericH2>
+          <GenericH2 style={{ color: "#080c50" }}>
+            {props.client.title}
+          </GenericH2>
         </ImgMeta>
       </Link>
     </ImgContainer>

@@ -3,6 +3,8 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../components/layout";
 import EngagementTiles from "../components/EngagementTiles";
+import About from "../components/About";
+import CTAGradient from "../components/CTAGradient";
 import * as styles from "../styles/client-details.module.css";
 import {
   GenericH2,
@@ -24,15 +26,19 @@ export default function ProjectDetails({ data }) {
     <Layout>
       <section style={{ position: "relative" }}>
         <div className={styles.clientDetail}>
-          <ImgBox>
-            <Img fluid={clientDetail.childImageSharp.fluid} />
+          <ImgBox height="800px">
+            <Img
+              fluid={clientDetail.childImageSharp.fluid}
+              style={{ maxHeight: "100%" }}
+              imgStyle={{ objectFit: "cover" }}
+            />
             <ImgMeta>
               <GenericH2
                 style={{
                   position: "relative",
                   top: "85%",
                   left: "1%",
-                  fontSize: "20px",
+                  fontSize: "30px",
                 }}
               >
                 {hover}
@@ -43,7 +49,6 @@ export default function ProjectDetails({ data }) {
       </section>
       <DetailsSection>
         <ReadSection white>
-          <h5>{title}</h5>
           <GenereicParaAbout>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </GenereicParaAbout>
@@ -75,6 +80,8 @@ export default function ProjectDetails({ data }) {
         </SectionFour> */}
       </DetailsSection>
       <EngagementTiles />
+      <About />
+      <CTAGradient />
     </Layout>
   );
 }

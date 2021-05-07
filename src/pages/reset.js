@@ -15,11 +15,11 @@ const reset = () => {
         <ReadBannerA img={"/readA.png"}></ReadBannerA>
       </section>
       <ReadSection white>
-        <h5>
-          RESET <br />– Reimagining our World and Creating a Different Future{" "}
-        </h5>
         <div>
-          <GenereicParaRead lessSize grey>
+          <h5>
+            RESET <br /> Rethinking our World and Creating a Different Future{" "}
+          </h5>
+          <GenereicParaRead lessSize lessM grey>
             Everybody has a plan — until they don’t. Approaching the dawn of a
             new decade, global sentiment in the 2020s was brimming with
             optimism. <br />
@@ -39,14 +39,16 @@ const reset = () => {
             things are. Big changes can become catalysts for a better world.
             <br /> What might that world be like?
           </GenereicParaRead>
-          <GenereicParaRead lessSize grey>
+          <GenereicParaRead lessSize grey style={{ marginBottom: "20px" }}>
             This is the story of how the 2020s will change modern humanity
             forever. Let’s rewrite our future together.
           </GenereicParaRead>
         </div>
-        <Link to="https://www.worldscientific.com/worldscibooks/10.1142/12023">
-          Read it
-        </Link>
+        <div>
+          <Link to="https://www.worldscientific.com/worldscibooks/10.1142/12023">
+            Read it
+          </Link>
+        </div>
       </ReadSection>
       <EngagementTiles />
     </Layout>

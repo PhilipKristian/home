@@ -5,7 +5,11 @@ import SingleImage from "../components/SingleImage";
 
 import { ImagesWrapper, SectionThree } from "../styles/IndexStyles";
 
-import { ReadBanner, ReadTextWrapper } from "../styles/ReadStyles";
+import {
+  ReadBanner,
+  ReadTextWrapper,
+  ReadTextWrapperH2,
+} from "../styles/ReadStyles";
 
 import image01 from "../../static/readA.png";
 import image02 from "../../static/readB.png";
@@ -15,7 +19,7 @@ import image04 from "../../static/readD.jpg";
 const clients = [
   {
     source: image01,
-    title: "RESET (World Scientific Publishing) ",
+    title: "RESET ",
     link: "../reset",
   },
   {
@@ -25,7 +29,7 @@ const clients = [
   },
   {
     source: image03,
-    title: "How the Trust Economy Could Benefit Us All ",
+    title: "",
     link: "../../st-gallen-symposium",
   },
   {
@@ -42,11 +46,11 @@ export default function Index({ client }) {
         <ReadBanner></ReadBanner>
         <ReadTextWrapper>
           <div>
-            <h2>
+            <ReadTextWrapperH2>
               "One of the most creative yet astute thinkers <br />I have ever
               met in many years as an investor and entrepreneur." <br />–
               Co-Founder, Circles.Life
-            </h2>
+            </ReadTextWrapperH2>
           </div>
         </ReadTextWrapper>
       </section>

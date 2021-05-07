@@ -15,8 +15,8 @@ const reset = () => {
         <ReadBannerA img={"/readD.jpg"}></ReadBannerA>
       </section>
       <ReadSection white>
-        <h5>Trust is the World’s Most Impactful Economic Power</h5>
         <div>
+          <h5>Trust is the World’s Most Impactful Economic Power</h5>
           <GenereicParaRead lessSize grey>
             Economics is a social science. Keynote speakers on leadership and
             trust rarely touch on this, but they should.
@@ -44,9 +44,11 @@ const reset = () => {
             their audiences in the digital age.
           </GenereicParaRead>
         </div>
-        <Link to="https://brandequity.economictimes.indiatimes.com/news/industry/philipp-kristian-diekhoner-trust-is-worlds-most-impactful-economic-power/74235908">
-          Read it
-        </Link>
+        <div>
+          <Link to="https://brandequity.economictimes.indiatimes.com/news/industry/philipp-kristian-diekhoner-trust-is-worlds-most-impactful-economic-power/74235908">
+            Read it
+          </Link>
+        </div>
       </ReadSection>
       <EngagementTiles />
     </Layout>

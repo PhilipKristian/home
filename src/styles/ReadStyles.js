@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import imgA from "../../static/readBg.png";
 
+const media = {
+  desktop: "@media(min-width: 1000px)",
+};
+
 const ReadBanner = styled.div`
   &:after {
     content: "";
@@ -30,11 +34,9 @@ const ReadBannerA = styled.div`
 const ReadH2 = styled.h2`
   font-size: 5rem;
   font-family: Fira Sans;
-  padding-top: 25%;
-  padding-left: 20px;
+  padding-top: ${props => (props.lessPaddingTop ? "22%" : "25%")};
+  padding-left: 28px;
   color: White;
-  text-transform: uppercase;
-  letter-spacing: 0.6rem;
   margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
 `;
 const ReadTextWrapper = styled.div`
@@ -43,57 +45,63 @@ const ReadTextWrapper = styled.div`
   padding-left: 40px;
   top: 65%;
   color: black;
+
   div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  h2 {
+`;
+const ReadTextWrapperH2 = styled.h2`
+  font-size: 2rem;
+  font-family: Playfair Display;
+  opacity: 1;
+  padding: 0.35em 1em;
+  margin: 0;
+  ${media.desktop} {
     font-size: 4rem;
-    font-family: Playfair Display;
-    opacity: 1;
-    padding: 0.35em 1em;
-    margin: 0;
   }
+}
 `;
 const GenereicParaRead = styled.p`
   text-align: left;
   font-family: Fira Sans;
-
-  font-size: 18px;
-  color: ${props => (props.grey ? "#4E4852" : "#ffffff")};
+  font-weight: 100;
+  font-size: 20px;
+  color: #080c50;
 `;
 const ReadSection = styled.section`
   background-color: ${props => (props.white ? "#ffffff" : "#21b2a6")};
-  text-align: left;
   margin-top: ${props => (props.less ? "30px" : "50px")};
-  margin-bottom: 50px;
-  padding: ${props => (props.more ? "3rem 0" : "2rem 0")};
+  margin-bottom: ${props => (props.lessM ? "30px" : "50px")}
+  padding: ${props => (props.lessP ? "3rem 0" : "2rem 0")};
   div {
-    width: 90%;
-    margin: 62px;
+    width: 66%;
+    margin: 42px;
   }
   h5 {
-    color: black;
+    color: #080c50;
     font-size: 2.5rem;
     font-family: Playfair Display;
-    margin: 62px;
+    margin-bottom: 62px;
+    margin-top: 31px;
     text-align: left;
   }
   h3 {
     color: black;
     font-size: 3rem;
     font-family: Playfair Display;
-    margin-bottom: 50px;
+    margin-bottom: ${props => (props.less ? "50px" : "25px")}
     text-align: left;
   }
   h2 {
     color: grey;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: Playfair Display;
-    padding-left: 80px;
+    color: #080c50;
     margin-bottom: 70px;
+    
   }
   a {
     background: rgb(255, 0, 133);
@@ -104,14 +112,14 @@ const ReadSection = styled.section`
     );
     box-shadow: none;
     color: #ffffff;
-    border-radius: 3px;
+    border-radius: 100px;
+    font-family: Fira Sans;
     border: 0;
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: 600;
-    letter-spacing: 0.225em;
-    padding: 1.8rem 0.8rem;
-    text-align: center;
+    padding: 2.8rem 0.8rem;
+    text-align: left;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -121,6 +129,7 @@ export {
   ReadBanner,
   ReadBannerA,
   ReadTextWrapper,
+  ReadTextWrapperH2,
   GenereicParaRead,
   ReadH2,
   ReadSection,
