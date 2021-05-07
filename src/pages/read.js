@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import SingleImage from "../components/SingleImage";
 
 import { ImagesWrapper, SectionThree } from "../styles/IndexStyles";
-
+import EngagementTiles from "../components/EngagementTiles";
 import {
   ReadBanner,
   ReadTextWrapper,
@@ -21,21 +21,25 @@ const clients = [
     source: image01,
     title: "RESET ",
     link: "../reset",
+    color: "white",
   },
   {
     source: image02,
     title: "The Trust Economy",
     link: "../trust-economy",
+    color: "#080c50",
   },
   {
     source: image03,
     title: "",
     link: "../../st-gallen-symposium",
+    color: "#080c50",
   },
   {
     source: image04,
     title: "Economic Times",
     link: "../economic-times",
+    color: "white",
   },
 ];
 
@@ -48,8 +52,8 @@ export default function Index({ client }) {
           <div>
             <ReadTextWrapperH2>
               "One of the most creative yet astute thinkers <br />I have ever
-              met in many years as an investor and entrepreneur." <br />–
-              Co-Founder, Circles.Life
+              met in many years as an investor <br />
+              and entrepreneur." <br />– Co-Founder, Circles.Life
             </ReadTextWrapperH2>
           </div>
         </ReadTextWrapper>
@@ -65,6 +69,7 @@ export default function Index({ client }) {
             <SingleImage client={clients[3]} />
           </ImagesWrapper>
         </div>
+        <EngagementTiles />
       </SectionThree>
     </Layout>
   );

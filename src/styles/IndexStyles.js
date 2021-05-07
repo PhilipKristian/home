@@ -57,6 +57,23 @@ const GenericH2 = styled.h2`
   color: #ffffff;
   margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
 `;
+const GenericImgMeta = styled.h2`
+  font-family: Fira Sans;
+  padding: ${props => (props.none ? "0" : "0.5em 0")};
+  color: #ffffff;
+  margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
+  position: absolute;
+  padding: 30px;
+  z-index: 2;
+  top: 80;
+  right: 30;
+  bottom: 0;
+  left: 0;
+  fontsize: "30x";
+  ${media.desktop} {
+    fontsize: "50px";
+  }
+`;
 
 const Banner = styled.div`
   &:after {
@@ -244,21 +261,19 @@ const SectionFour = styled.section`
 `;
 
 const Footer = styled.footer`
+  padding: 6em 0 4em 0;
   background-color: #080c50;
-  font-family: Fira Sans;
-  display: flex;
-  height: 120px;
-  padding: 30px;
-  justify-content: space-between;
+  text-align: center;
   .icons > * {
     cursor: pointer;
     margin-right: 1rem;
     color: white;
   }
   .copyright {
+    font-family: Fira Sans;
     color: white;
     font-size: 1.2rem;
-    text-transform: uppercase;
+    padding: 0;
     margin-top: 1rem;
   }
 `;
@@ -359,4 +374,5 @@ export {
   DetailsSection,
   VideoMeta,
   LogoImg,
+  GenericImgMeta,
 };

@@ -34,7 +34,7 @@ const ReadBannerA = styled.div`
 const ReadH2 = styled.h2`
   font-size: 5rem;
   font-family: Fira Sans;
-  padding-top: ${props => (props.lessPaddingTop ? "22%" : "25%")};
+  padding-top: ${props => (props.lessPaddingTop ? "20%" : "25%")};
   padding-left: 28px;
   color: White;
   margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
@@ -73,12 +73,12 @@ const GenereicParaRead = styled.p`
 `;
 const ReadSection = styled.section`
   background-color: ${props => (props.white ? "#ffffff" : "#21b2a6")};
-  margin-top: ${props => (props.less ? "30px" : "50px")};
+  /* margin-top: ${props => (props.less ? "30px" : "50px")};
   margin-bottom: ${props => (props.lessM ? "30px" : "50px")}
-  padding: ${props => (props.lessP ? "3rem 0" : "2rem 0")};
+  padding: ${props => (props.lessP ? "3rem 0" : "2rem 0")}; */
   div {
-    width: 66%;
-    margin: 42px;
+    width: ${props => (props.fullSize ? "100%" : "66%")};
+    margin: ${props => (props.lessMargin ? "20px" : "42px")};
   }
   h5 {
     color: #080c50;

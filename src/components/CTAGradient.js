@@ -69,7 +69,6 @@ const CTAGradient = props => {
         </Box>
         <Box>
           <GenericH2 none>
-            Book the calendar
             <a href="https://calendly.com/philippkristian">
               <GenericH2>Schedule an intro </GenericH2>
             </a>

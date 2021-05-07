@@ -12,7 +12,7 @@ const media = {
   desktop: "@media(min-width: 1000px)",
 };
 
-const ET_Sub = styled.h2`
+const ETSub = styled.h2`
   font-size: 2.5rem;
   font-family: Fira Sans;
 
@@ -60,19 +60,19 @@ const EngagementTiles = props => {
       <div className="image1">
         <Link to="/read">
           <ReadH2 lessPaddingTop>Read</ReadH2>
-          <ET_Sub>Books and Press</ET_Sub>
+          <ETSub>Books and Press</ETSub>
         </Link>
       </div>
       <div className="image2">
         <Link to="/experience">
           <ReadH2 lessPaddingTop>Experience</ReadH2>
-          <ET_Sub>Keynotes and Masterclasses</ET_Sub>
+          <ETSub>Keynotes and Masterclasses</ETSub>
         </Link>
       </div>
       <div className="image3">
         <Link to="/create">
           <ReadH2 lessPaddingTop>Create</ReadH2>
-          <ET_Sub>Strategy and Foresight</ET_Sub>
+          <ETSub>Strategy and Foresight</ETSub>
         </Link>
       </div>
     </Tiles>

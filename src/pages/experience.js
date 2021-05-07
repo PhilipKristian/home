@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import EngagementTiles from "../components/EngagementTiles";
 import About from "../components/About";
 import CTAGradient from "../components/CTAGradient";
+import TICTile from "../components/TICTile";
 import {
   ReadBannerA,
   GenereicParaRead,
@@ -53,15 +54,16 @@ const reset = () => {
             masterclasses.
           </GenereicParaRead>
         </div>
-        <div>
-          <h5>TRUST</h5>
+
+        {/* <div>
+          <h1>TRUST: Unite your people (because we’re better together!) </h1>
           <GenereicParaRead>
-            <h2>Introduction to trust economy and digital trust revolution</h2>{" "}
-            <br />
-            - Navigating intergenerational leadership dynamics <br />
-            - New normal, future of work and digital leadership <br />
-            - Organisational purpose and ESG driving change for good <br />
-            - Values driven leadership and stakeholder management <br />
+            Introduction to trust economy and digital trust revolution (based on
+            The Trust Economy) <br />
+            Navigating intergenerational leadership dynamics <br />
+            New normal, future of work and digital leadership <br />
+            Organisational purpose and ESG driving change for good <br />
+            Values driven leadership and stakeholder management{" "}
           </GenereicParaRead>
         </div>
         <div>
@@ -97,8 +99,10 @@ const reset = () => {
             - Sustaining innovation momentum with ongoing engagement - <br />
             - Transforming corporate and board governance <br />
           </GenereicParaRead>
-        </div>
+        </div> */}
       </ReadSection>
+      <TICTile />
+
       <EngagementTiles />
       <About />
       <CTAGradient />

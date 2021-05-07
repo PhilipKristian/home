@@ -1,6 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
 import EngagementTiles from "../components/EngagementTiles";
+import About from "../components/About";
+import CTAGradient from "../components/CTAGradient";
 import { Link } from "gatsby";
 import {
   ReadBannerA,
@@ -69,6 +71,8 @@ const stGallenSymposium = () => {
         </div>
       </ReadSection>
       <EngagementTiles />
+      <About />
+      <CTAGradient />
     </Layout>
   );
 };

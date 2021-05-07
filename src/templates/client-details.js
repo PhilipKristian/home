@@ -16,6 +16,7 @@ import {
   GenericDetail,
   SectionFour,
   GenereicPara,
+  GenericImgMeta,
 } from "../styles/IndexStyles";
 import { ReadSection, GenereicParaRead } from "../styles/ReadStyles";
 
@@ -26,13 +27,14 @@ export default function ProjectDetails({ data }) {
     <Layout>
       <section style={{ position: "relative" }}>
         <div className={styles.clientDetail}>
-          <ImgBox height="800px">
+          <ImgBox>
             <Img
               fluid={clientDetail.childImageSharp.fluid}
               style={{ maxHeight: "100%" }}
               imgStyle={{ objectFit: "cover" }}
             />
             <ImgMeta>
+              {/* <GenericImgMeta>{hover}</GenericImgMeta> */}
               <GenericH2
                 style={{
                   position: "relative",

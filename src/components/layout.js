@@ -44,13 +44,39 @@ export default ({ children }) => (
     </Header>
     {children}
     <Footer>
-      <div className="icons">
+      <div>
+        <div className="icons">
+          <a href="https://twitter.com/philippkristian">
+            <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth />
+          </a>
+          <a href="https://sg.linkedin.com/in/philippkristian?trk=public_profile_browsemap_profile-result-card_result-card_full-click">
+            <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
+          </a>
+          <a href="mailto:hi@philippkristian.com) ">
+            <FontAwesomeIcon icon={faEnvelope} size="2x" fixedWidth />{" "}
+          </a>
+        </div>
+        <div>
+          <div className="copyright">
+            <span>
+              &copy;{" "}
+              <Link to="/privacy" style={{ color: "white" }}>
+                2021 | Philipp Kristian
+              </Link>
+            </span>
+          </div>
+          <div className="copyright">
+            <p style={{ fontSize: "10px" }}>
+              When we say we value your privacy, we absolutely do. This website
+              works without cookies
+            </p>
+          </div>
+        </div>
+      </div>
+      {/*       <div className="icons">
         <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth />
         <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
-        <h2 style={{ fontSize: "small" }}>
-          {" "}
-          <FontAwesomeIcon icon={faPhone} size="1x" fixedWidth /> +65 8950 9822
-        </h2>
+
         <a href="mailto:hi@philippkristian.com) ">
           <h2 style={{ fontSize: "small" }}>
             <FontAwesomeIcon icon={faEnvelope} size="1x" fixedWidth />{" "}
@@ -65,7 +91,7 @@ export default ({ children }) => (
             2021 | Philipp Kristian
           </Link>
         </span>
-      </div>
+      </div> */}
     </Footer>
   </div>
 );
