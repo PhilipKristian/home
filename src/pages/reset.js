@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import EngagementTiles from "../components/EngagementTiles";
 import About from "../components/About";
 import CTAGradient from "../components/CTAGradient";
