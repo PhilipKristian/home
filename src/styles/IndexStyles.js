@@ -27,12 +27,24 @@ const Header = styled.header`
     display: inline-block;
     padding-top: 10px;
     padding-left: 16px;
+    width: 100px;
     ${media.desktop} {
       .logo {
         padding-top: 20px;
         padding-left: 36px;
+        width: 200px; 
       }
+    }
+    .imgLogo {
+      width: 150px;
+      ${media.desktop} {
+        .imglogo {
+          width: 200px; 
+        }
+      }
+    } 
   }
+
 `;
 
 const LogoImg = styled.img`

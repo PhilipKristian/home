@@ -21,7 +21,7 @@ export default ({ children }) => (
     <Header>
       <Link to="/">
         <div className="logo">
-          <img src="/Logos-WidePKD.png" alt="PKLogo" width={"200"} />
+          <img className="imgLogo" src="/Logos-WidePKD.png" alt="PKLogo" />
         </div>
       </Link>
     </Header>
