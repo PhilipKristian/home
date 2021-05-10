@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import EngagementTiles from "../components/EngagementTiles";
 import About from "../components/About";
 import CTAGradient from "../components/CTAGradient";
@@ -21,8 +21,8 @@ const reset = () => {
           <h5>
             ‘Philipp is one of the most impressive visionaries I have had the
             pleasure of working with. He is exceptionally skilled at the human
-            element of innovation. Brilliant.’ <br />– Head of Innovation,
-            Manulife Philippines
+            element of innovation. Brilliant.’
+            <h2>– Head of Innovation, Manulife Philippines</h2>
           </h5>
           <h5>
             RESET <br /> Rethinking our World and Creating a Different Future{" "}

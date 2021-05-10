@@ -326,8 +326,9 @@ const GenericDetail = styled.h3`
 const GenereicParaAbout = styled.p`
   text-align: left;
   font-family: Fira Sans;
+  font-weight: 300;
   color: #080c50;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 2.5rem;
   h2 {
     text-align: left;

@@ -22,7 +22,7 @@ const trustEconomy = () => {
             ‘Trust is the elusive currency in politics and economics that
             everybody craves. Philipp makes a great case for why and how to
             build it.’
-            <br /> – Global Head of Creative and Sales Media, Audi AG
+            <h2>– Global Head of Creative and Sales Media, Audi AG</h2>
           </h5>
           <h5>
             The Trust Economy – <br /> How Digital Technology is Transforming

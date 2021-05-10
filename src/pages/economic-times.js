@@ -21,7 +21,7 @@ const reset = () => {
           <h5>
             ‘Great intelligence at the service of creative ideas, all
             served blindly fast’
-            <br /> – Executive Director, FutureBrand
+            <h2>– Executive Director, FutureBrand</h2>
           </h5>
           <h5>Trust is the World’s Most Impactful Economic Power</h5>
           <GenereicParaRead lessSize grey>

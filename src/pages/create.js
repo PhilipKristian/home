@@ -20,8 +20,8 @@ const reset = () => {
         <div>
           <h5>
             ‘Philipp is a rare talent. Vision, deep thinking, insight,
-            connectedness and confident execution. He’s proven all’ – Walter de
-            Oude, Group CEO, Singlife
+            connectedness and confident execution. He’s proven all’
+            <h2>– Walter de Oude, Group CEO, Singlife</h2>
           </h5>
         </div>
         <div>
