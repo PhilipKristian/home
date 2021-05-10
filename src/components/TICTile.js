@@ -16,16 +16,23 @@ const TileLayout = styled.div`
   div {
     background-image: ${props => props.img};
     background-size: cover;
-    padding-left: 42px;
+    padding-left: 16px;
     width: 100%;
-    height: 350px;
+    height: 390px;
+    ${media.desktop} {
+      height: 350px;
+      padding-left: 42px;
+    }
   }
   p {
     font-family: Fira Sans;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 12px;
     color: white;
     line-height: 25px;
+    ${media.desktop} {
+      font-size: 16px;
+    }
   }
   h1 {
     padding-top: 20px;

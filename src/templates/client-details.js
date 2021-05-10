@@ -33,19 +33,18 @@ export default function ProjectDetails({ data }) {
               style={{ maxHeight: "100%" }}
               imgStyle={{ objectFit: "cover" }}
             />
-            <ImgMeta>
-              {/* <GenericImgMeta>{hover}</GenericImgMeta> */}
+            {/*  <ImgMeta>
               <GenericH2
                 style={{
                   position: "relative",
                   top: "85%",
                   left: "1%",
-                  fontSize: "30px",
+                  fontSize: "60px",
                 }}
               >
                 {hover}
               </GenericH2>
-            </ImgMeta>
+            </ImgMeta> */}
           </ImgBox>
         </div>
       </section>

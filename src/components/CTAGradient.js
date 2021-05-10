@@ -6,7 +6,7 @@ const media = {
 };
 
 const GenericH2 = styled.h2`
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-family: Fira Sans;
   font-weight: 400;
   text-align: center;
@@ -14,7 +14,7 @@ const GenericH2 = styled.h2`
 
   color: ${props => (props.dark ? "#4E4852" : "#ffffff")};
   ${media.desktop} {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 `;
 const Section = styled.section`

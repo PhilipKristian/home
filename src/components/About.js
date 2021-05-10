@@ -16,7 +16,7 @@ ${media.desktop} {
 `;
 const GenereicPara = styled.p`
   padding-bottom: ${props => (props.quoteListing ? "" : "30px")};
-  font-size: ${props => (props.quote ? "20px" : "15px")};
+  font-size: ${props => (props.quote ? "25px" : "21px")};
   font-family: Fira Sans;
   font-weight: 300;
   color: #080c50;

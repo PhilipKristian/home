@@ -53,6 +53,7 @@ const GenereicPara = styled.p`
 const GenericH2 = styled.h2`
   font-size: 4rem;
   font-family: Fira Sans;
+  font-weight: 400;
   padding: ${props => (props.none ? "0" : "0.5em 0")};
   color: #ffffff;
   margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
@@ -328,10 +329,10 @@ const GenereicParaAbout = styled.p`
   font-family: Fira Sans;
   font-weight: 300;
   color: #080c50;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 2.5rem;
-  h2 {
-    text-align: left;
+  ${media.desktop} {
+    font-size: 20px;
   }
 `;
 
