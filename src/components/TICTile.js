@@ -8,7 +8,7 @@ const media = {
 const TileLayout = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 
   ${media.desktop} {
     flex-flow: row nowrap;
@@ -28,6 +28,7 @@ const TileLayout = styled.div`
     line-height: 25px;
   }
   h1 {
+    padding-top: 20px;
     font-family: Fira Sans;
     color: white;
   }
@@ -38,8 +39,7 @@ const TICTile = props => {
     <TileLayout>
       <div style={{ backgroundColor: "#080c50" }}>
         <h1>
-          TRUST:
-          <br /> Unite your people <br />
+          TRUST: Unite your people <br />
           (because we’re better together!){" "}
         </h1>
         <p>
@@ -53,8 +53,7 @@ const TICTile = props => {
       </div>
       <div style={{ backgroundColor: "#080c50" }}>
         <h1>
-          INNOVATE:
-          <br /> Imagine your future <br />
+          INNOVATE: Imagine your future <br />
           (because we all dream of a better world!){" "}
         </h1>
         <p>
@@ -76,8 +75,7 @@ const TICTile = props => {
       </div>
       <div style={{ backgroundColor: "#080c50" }}>
         <h1>
-          CHANGE: <br />
-          Transform your reality <br />
+          CHANGE: Transform your reality <br />
           (because making it happen is everything!){" "}
         </h1>
         <p>
