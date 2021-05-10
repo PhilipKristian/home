@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
-import Layout from "../components/xxxLayout";
+import Layout from "../components/Layout";
 import EngagementTiles from "../components/EngagementTiles";
 import About from "../components/About";
 import CTAGradient from "../components/CTAGradient";

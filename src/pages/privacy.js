@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/xxxLayout";
+import Layout from "../components/Layout";
 
 import { GenereicParaRead, ReadSection } from "../styles/ReadStyles";
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Layout from "../components/xxxLayout";
+import Layout from "../components/Layout";
 import SingleImage from "../components/SingleImage";
 
 import { ImagesWrapper, SectionThree } from "../styles/IndexStyles";

@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import ReactPlayer from "react-player";
 import EngagementTiles from "../components/EngagementTiles";
 
-import Layout from "../components/xxxLayout";
+import Layout from "../components/Layout";
 import SingleImage from "../components/SingleImage";
 
 import {
