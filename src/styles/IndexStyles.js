@@ -27,12 +27,12 @@ const Header = styled.header`
     display: inline-block;
     padding-top: 10px;
     padding-left: 16px;
+    ${media.desktop} {
+      .logo {
+        padding-top: 20px;
+        padding-left: 36px;
+      }
   }
-  ${media.desktop} {
-    .logo {
-      padding-top: 20px;
-      padding-left: 36px;
-    }
 `;
 
 const LogoImg = styled.img`
@@ -270,7 +270,8 @@ const Footer = styled.footer`
     color: white;
   }
   .copyright {
-    font-family: Fira Sans;
+    font-family: Fira Sans Condensed;
+    font-weight: 400;
     color: white;
     font-size: 1.2rem;
     padding: 0;

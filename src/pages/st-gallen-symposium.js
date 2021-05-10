@@ -20,6 +20,11 @@ const stGallenSymposium = () => {
       <ReadSection white lessM>
         <div>
           <h5 style={{ margineBottom: "31px" }}>
+            ‘Thanks so much for coming and sharing your wisdom. <br />
+            People like you will continue to inspire us!’
+            <br /> – CEO, Providend Fund
+          </h5>
+          <h5 style={{ margineBottom: "31px" }}>
             How the Trust Economy Could Benefit Us All <br /> (St. Gallen
             Symposium)
           </h5>

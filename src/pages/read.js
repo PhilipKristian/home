@@ -12,7 +12,7 @@ import {
 } from "../styles/ReadStyles";
 
 import image01 from "../../static/readA.png";
-import image02 from "../../static/readB.png";
+import image02 from "../../static/readB.jpg";
 import image03 from "../../static/readC.png";
 import image04 from "../../static/readD.jpg";
 

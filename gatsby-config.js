@@ -6,6 +6,23 @@
 
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: "Fira Sans",
+            variable: true,
+            weights: ["200..900"],
+          },
+          {
+            family: "Fira Sans Condensed",
+            variable: true,
+            weights: ["200..900"],
+          },
+        ],
+      },
+    },
     "gatsby-remark-embed-video",
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
@@ -31,7 +48,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Playfair Display`, `Fira Sans`],
+        fonts: [
+          `Playfair Display`,
+          `Fira Sans\:100,200,400,700`,
+          `Fira Sans Condensed\:300,400`,
+        ],
 
         display: "swap",
       },

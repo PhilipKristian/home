@@ -15,9 +15,10 @@ const media = {
 const ETSub = styled.h2`
   font-size: 2.5rem;
   font-family: Fira Sans;
+  font-weight: 400;
 
   padding-left: 28px;
-  color: White;
+  color: white;
   margin: ${props => (props.some ? "5rem 0 0 0" : "0")};
 `;
 

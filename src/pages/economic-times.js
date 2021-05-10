@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import { Link } from "gatsby";
 import EngagementTiles from "../components/EngagementTiles";
+import About from "../components/About";
+import CTAGradient from "../components/CTAGradient";
 import {
   ReadBannerA,
   GenereicParaRead,
@@ -16,6 +18,11 @@ const reset = () => {
       </section>
       <ReadSection white>
         <div>
+          <h5>
+            ‘Great intelligence at the service of creative ideas, all
+            served blindly fast’
+            <br /> – Executive Director, FutureBrand
+          </h5>
           <h5>Trust is the World’s Most Impactful Economic Power</h5>
           <GenereicParaRead lessSize grey>
             Economics is a social science. Keynote speakers on leadership and
@@ -51,6 +58,8 @@ const reset = () => {
         </div>
       </ReadSection>
       <EngagementTiles />
+      <About />
+      <CTAGradient />
     </Layout>
   );
 };

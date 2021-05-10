@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import { Link } from "gatsby";
 import EngagementTiles from "../components/EngagementTiles";
+import About from "../components/About";
+import CTAGradient from "../components/CTAGradient";
 import {
   ReadBannerA,
   GenereicParaRead,
@@ -12,10 +14,16 @@ const trustEconomy = () => {
   return (
     <Layout>
       <section style={{ position: "relative" }}>
-        <ReadBannerA img={"/readB.png"}></ReadBannerA>
+        <ReadBannerA img={"/readB.jpg"}></ReadBannerA>
       </section>
       <ReadSection white>
         <div>
+          <h5>
+            ‘Trust is the elusive currency in politics and economics that
+            everybody craves. Philipp makes a great case for why and how to
+            build it.’
+            <br /> – Global Head of Creative and Sales Media, Audi AG
+          </h5>
           <h5>
             The Trust Economy – <br /> How Digital Technology is Transforming
             Trust and Creating Social and Business Innovation
@@ -48,6 +56,8 @@ const trustEconomy = () => {
         </div>
       </ReadSection>
       <EngagementTiles />
+      <About />
+      <CTAGradient />
     </Layout>
   );
 };

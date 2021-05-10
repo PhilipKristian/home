@@ -17,7 +17,8 @@ ${media.desktop} {
 const GenereicPara = styled.p`
   padding-bottom: ${props => (props.quoteListing ? "" : "30px")};
   font-size: ${props => (props.quote ? "20px" : "15px")};
-  font-family: ${props => (props.quote ? "#Playfair Display" : "Fira Sans")};
+  font-family: Fira Sans;
+  font-weight: 300;
   color: #080c50;
   ${media.desktop} {
     font-size: ${props => (props.quote ? "30px" : "20px")};
@@ -27,11 +28,11 @@ const GenereicPara = styled.p`
 const About = props => {
   return (
     <AboutLayout>
-      <GenereicPara quote>
+      <GenereicPara style={{ fontWeight: "400", fontSize: "30px" }}>
         ‘I believe in a world in which we all trust each other. When we trust
         ourselves and others, we transform. Trust empowers us to become the best
-        version of ourselves and humanity. <br /> It’s our shared foundation for
-        greatness.’ – Philipp Kristian
+        version of ourselves and humanity. It’s our shared foundation for
+        greatness.’ <br />– Philipp Kristian
       </GenereicPara>
       <GenereicPara quoteListing style={{ color: "#080c50" }}>
         Philipp Kristian is a global innovation x trust pioneer, voice of

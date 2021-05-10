@@ -34,6 +34,7 @@ const ReadBannerA = styled.div`
 const ReadH2 = styled.h2`
   font-size: 5rem;
   font-family: Fira Sans;
+  font-weight: 400;
   padding-top: ${props => (props.lessPaddingTop ? "20%" : "25%")};
   padding-left: 28px;
   color: White;
@@ -67,23 +68,25 @@ const ReadTextWrapperH2 = styled.h2`
 const GenereicParaRead = styled.p`
   text-align: left;
   font-family: Fira Sans;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 20px;
   color: #080c50;
 `;
 const ReadSection = styled.section`
   background-color: ${props => (props.white ? "#ffffff" : "#21b2a6")};
   /* margin-top: ${props => (props.less ? "30px" : "50px")};
-  margin-bottom: ${props => (props.lessM ? "30px" : "50px")}
+  margin-bottom: ${props => (props.lessM ? "30px" : "80px")}
   padding: ${props => (props.lessP ? "3rem 0" : "2rem 0")}; */
   div {
     width: ${props => (props.fullSize ? "100%" : "66%")};
     margin: ${props => (props.lessMargin ? "20px" : "42px")};
+    margin-bottom: 60px;
   }
   h5 {
     color: #080c50;
-    font-size: 2.5rem;
-    font-family: Playfair Display;
+    font-size: 2.8rem;
+    font-family: Fira Sans;
+    font-weight: 400;
     margin-bottom: 62px;
     margin-top: 31px;
     text-align: left;
@@ -96,32 +99,26 @@ const ReadSection = styled.section`
     text-align: left;
   }
   h2 {
-    color: grey;
-    font-size: 1.5rem;
-    font-family: Playfair Display;
+    font-size: 2rem;
+    font-family: Fira Sans;
+    font-weight: 400;
     color: #080c50;
     margin-bottom: 70px;
     
   }
   a {
-    background: rgb(255, 0, 133);
-    background: linear-gradient(
-      65deg,
-      rgba(255, 0, 133, 1) 20%,
-      rgba(248, 8, 8, 1) 50%
-    );
+    background-color: #080c50;
     box-shadow: none;
     color: #ffffff;
-    border-radius: 100px;
     font-family: Fira Sans;
+    font-weight: 200;
     border: 0;
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 2.8rem 0.8rem;
+    padding: 1.2rem 0.8rem;
     text-align: left;
     text-decoration: none;
-    text-transform: uppercase;
   }
 `;
 

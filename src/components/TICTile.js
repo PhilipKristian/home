@@ -8,47 +8,54 @@ const media = {
 const TileLayout = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  padding-left: 40px;
   padding-bottom: 50px;
 
   ${media.desktop} {
     flex-flow: row nowrap;
   }
   div {
-    margin: 10px;
+    background-image: ${props => props.img};
+    background-size: cover;
+    padding-left: 42px;
+    width: 100%;
+    height: 350px;
   }
   p {
     font-family: Fira Sans;
+    font-weight: 300;
     font-size: 16px;
-    color: #080c50;
+    color: white;
+    line-height: 25px;
   }
   h1 {
     font-family: Fira Sans;
-    color: #080c50;
+    color: white;
   }
 `;
 
 const TICTile = props => {
   return (
     <TileLayout>
-      <div>
+      <div style={{ backgroundColor: "#080c50" }}>
         <h1>
           TRUST:
-          <br /> Unite your people (because we’re better together!){" "}
+          <br /> Unite your people <br />
+          (because we’re better together!){" "}
         </h1>
         <p>
-          Introduction to trust economy and digital trust revolution (based on
-          The Trust Economy) <br />
+          Introduction to trust economy and digital trust revolution <br />
+          (based on The Trust Economy) <br />
           Navigating intergenerational leadership dynamics <br />
           New normal, future of work and digital leadership <br />
           Organisational purpose and ESG driving change for good <br />
           Values driven leadership and stakeholder management{" "}
         </p>
       </div>
-      <div>
+      <div style={{ backgroundColor: "#080c50" }}>
         <h1>
           INNOVATE:
-          <br /> Imagine your future (because we all dream of a better world!){" "}
+          <br /> Imagine your future <br />
+          (because we all dream of a better world!){" "}
         </h1>
         <p>
           A global new normal and post-pandemic reset (based on RESET) <br />
@@ -67,10 +74,11 @@ const TICTile = props => {
           Digital by default, interface revolution and digital business design{" "}
         </p>
       </div>
-      <div>
+      <div style={{ backgroundColor: "#080c50" }}>
         <h1>
           CHANGE: <br />
-          Transform your reality (because making it happen is everything!){" "}
+          Transform your reality <br />
+          (because making it happen is everything!){" "}
         </h1>
         <p>
           Translating agile transformation into everyday agility <br />

@@ -95,7 +95,7 @@ export default function Index({ data }) {
           loop={true}
           width="100%"
           height="100%"
-          light="/pk01.jpeg"
+          light="/pk01.png"
         />
       </div>
 
