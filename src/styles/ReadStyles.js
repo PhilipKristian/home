@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import imgA from "../../static/readBg.png";
+import imgA from "../../static/read-tile.jpg";
 
 const media = {
   desktop: "@media(min-width: 1000px)",
@@ -55,13 +55,19 @@ const ReadTextWrapper = styled.div`
   }
 `;
 const ReadTextWrapperH2 = styled.h2`
-  font-size: 2rem;
-  font-family: Playfair Display;
+  font-size: 2.3rem;
+  font-family: Fira Sans;
+  color: white;
+  font-weight: 400;
   opacity: 1;
-  padding: 0.35em 1em;
-  margin: 0;
+  padding: 5px;
+  padding-top: 30px;
+  margin: 20px;
   ${media.desktop} {
-    font-size: 4rem;
+    font-size: 4.5rem;
+    margin: 5px;
+    padding-top: 0px;
+    padding: 0.35em 1em;
   }
 }
 `;

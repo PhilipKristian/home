@@ -51,9 +51,9 @@ export default function Index({ client }) {
         <ReadTextWrapper>
           <div>
             <ReadTextWrapperH2>
-              "One of the most creative yet astute thinkers <br />I have ever
+              ‘One of the most creative yet astute thinkers <br />I have ever
               met in many years as an investor <br />
-              and entrepreneur." <br />– Co-Founder, Circles.Life
+              and entrepreneur.’ <br />– Co-Founder, Circles.Life
             </ReadTextWrapperH2>
           </div>
         </ReadTextWrapper>

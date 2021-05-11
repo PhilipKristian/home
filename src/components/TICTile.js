@@ -18,9 +18,8 @@ const TileLayout = styled.div`
     background-size: cover;
     padding-left: 16px;
     width: 100%;
-    height: 390px;
+
     ${media.desktop} {
-      height: 350px;
       padding-left: 42px;
     }
   }

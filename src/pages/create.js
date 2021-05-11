@@ -14,7 +14,7 @@ const reset = () => {
   return (
     <Layout>
       <section style={{ position: "relative" }}>
-        <ReadBannerA color img={"/Create-Detail.png"}></ReadBannerA>
+        <ReadBannerA color img={"/create-tile.jpg"}></ReadBannerA>
       </section>
       <ReadSection white style={{ padding: "10px" }}>
         <div>
