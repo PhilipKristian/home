@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 
 function create() {
   return (
@@ -8,4 +8,13 @@ function create() {
   );
 }
 
-export default create;
+export default create; */
+import React from "react";
+
+export default function NotFound() {
+  if (typeof window !== "undefined") {
+    window.location = "/";
+  }
+
+  return null;
+}
