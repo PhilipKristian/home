@@ -15,36 +15,23 @@ const Header = styled.header`
   position: fixed;
   background-color: rgba(0, 0, 0, 0.01);
   color: white;
-  padding: 3rem 0;
-  }
+  padding: 1rem 0;
+
   .menu_items {
     display: flex;
   }
   .menu_items > * {
     margin-right: 1rem;
   }
-  .logo {
-    display: inline-block;
-    padding-top: 10px;
-    padding-left: 16px;
+
+  .imgLogo {
     width: 100px;
     ${media.desktop} {
-      .logo {
-        padding-top: 20px;
-        padding-left: 36px;
-        width: 200px; 
+      .imglogo {
+        width: 200px;
       }
     }
-    .imgLogo {
-      width: 150px;
-      ${media.desktop} {
-        .imglogo {
-          width: 200px; 
-        }
-      }
-    } 
   }
-
 `;
 
 const LogoImg = styled.img`
@@ -82,60 +69,62 @@ const GenericImgMeta = styled.h2`
   right: 30;
   bottom: 0;
   left: 0;
-  fontsize: "30x";
+  font-size: "30x";
   ${media.desktop} {
-    fontsize: "50px";
+    font-size: "50px";
   }
 `;
 
 const Banner = styled.div`
-  &:after {
-    z-index: 20;
-    content: "";
-    display: block;
-    height: ${props => (props.parallax ? "80vh" : "100vh")};
-    width: 100%;
-    background: rgb(255,0,133);
-    background: linear-gradient(65deg, rgba(255,0,133,1) 20%, rgba(248,8,8,1) 50%);
+  z-index: 20;
+  content: "";
+  display: block;
+  height: ${props => (props.parallax ? "80vh" : "100vh")};
+  width: 100%;
+  background: rgb(255, 0, 133);
+  background: linear-gradient(
+    65deg,
+    rgba(255, 0, 133, 1) 20%,
+    rgba(248, 8, 8, 1) 50%
+  );
 `;
+
 const TextWrapper = styled.div`
-   {
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    h2 {
-      font-size: 5rem;
-      opacity: 1;
-      padding: 0.35em 1em;
-      border-top: 2px solid white;
-      border-bottom: 2px solid white;
-      text-transform: uppercase;
-      margin: 0;
-    }
-    a {
-      background-color: #ed4933;
-      box-shadow: none;
-      color: #ffffff;
-      border-radius: 3px;
-      border: 0;
-      cursor: pointer;
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: 0.225em;
-      padding: 1.8rem 0.8rem;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 5rem;
+    opacity: 1;
+    padding: 0.35em 1em;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  a {
+    background-color: #ed4933;
+    box-shadow: none;
+    color: #ffffff;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.225em;
+    padding: 1.8rem 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 `;
 
@@ -170,7 +159,7 @@ const SectionTwo = styled.div`
   justify-content: center;
   .player-wrapper {
     position: relative;
-   /*  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */ */
+    /*  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
   }
 
   .react-player {

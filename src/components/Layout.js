@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Footer } from "./Footer";
+import MenuHeader from "./menuHeader";
 
 import {
   Header,
@@ -18,13 +19,15 @@ import {
 
 export default ({ children }) => (
   <div>
-    <Header>
+    {/* <Header>
       <Link to="/">
         <div className="logo">
           <img className="imgLogo" src="/Logos-WidePKD.png" alt="PKLogo" />
         </div>
       </Link>
-    </Header>
+    </Header> */}
+
+    <MenuHeader />
 
     {children}
 

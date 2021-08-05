@@ -23,36 +23,35 @@ const ETSub = styled.h2`
 `;
 
 const Tiles = styled.div`
-display: flex;
-flex-flow: column nowrap;
-justify-content: flex-start;
-${media.desktop} {
   display: flex;
-  flex-flow: row nowrap;
-}
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  ${media.desktop} {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 
-}
-.image1 {
-background-image: url(${img1});
-background-size: cover;
-background-position: center;
-width: 100%;
-height: 250px;
-}
-.image2 {
-  background-image: url(${img2});
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 250px;
-}
-.image3 {
-  background-image: url(${img3});
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 250px;
-}
+  .image1 {
+    background-image: url(${img1});
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+  }
+  .image2 {
+    background-image: url(${img2});
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+  }
+  .image3 {
+    background-image: url(${img3});
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+  }
 `;
 
 const EngagementTiles = props => {
