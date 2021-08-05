@@ -24,7 +24,7 @@ const HeaderWrapper = styled.header`
   position: fixed;
   top: -100px;
   max-height: 70px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Fira Sans";
   z-index: 999;
   width: 100%;
   padding-top: 17px;
@@ -39,10 +39,9 @@ const HeaderWrapper = styled.header`
   }
 
   &.sticky {
-    background-color: rgba(255, 255, 255, 0.93);
+    background-color: rgba(0, 0, 0, 0.01);
     opacity: 1;
     top: 0px;
-    border-bottom: 1px solid gainsboro;
   }
 
   &.sticky.open-nav {

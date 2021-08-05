@@ -6,10 +6,10 @@
 }
 
 body {
-  color: #8f8f8f;
+  color: white;
   background: white;
   font-family: "Cardo", serif;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -156,7 +156,6 @@ p {
   background-color: rgba(255, 255, 255, 0.93);
   opacity: 1;
   top: 0px;
-  border-bottom: 1px solid gainsboro;
 }
 
 .logo {
@@ -220,8 +219,8 @@ nav ul li {
 
 nav ul a {
   color: #888888;
-  text-transform: uppercase;
-  font-size: 12px;
+  /* text-transform: uppercase; */
+  font-size: 16px;
 }
 
 .mobile-toggle {
