@@ -89,7 +89,7 @@ export default function Index({ data }) {
 
       <div style={{ position: "relative", paddingTop: "56.25%" }}>
         <ReactPlayer
-          url="https://vimeo.com/531560161"
+          url="https://vimeo.com/713546413"
           style={{ position: "absolute", top: "0", left: "0" }}
           playing={true}
           loop={true}
